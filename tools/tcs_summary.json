@@ -1,0 +1,2536 @@
+{
+  "data_date": "2026-11-23",
+  "dataset_version": "v1.1",
+  "all": 2718,
+  "clean": 1429,
+  "top_tier": 214,
+  "tiers": [
+    [
+      "A",
+      142
+    ],
+    [
+      "A*",
+      57
+    ],
+    [
+      "A (Findings)",
+      15
+    ]
+  ],
+  "authors_tracked": 102,
+  "years": [
+    {
+      "year": 2023,
+      "all": 674,
+      "clean": 400
+    },
+    {
+      "year": 2024,
+      "all": 689,
+      "clean": 375
+    },
+    {
+      "year": 2025,
+      "all": 731,
+      "clean": 367
+    },
+    {
+      "year": 2026,
+      "all": 624,
+      "clean": 287
+    }
+  ],
+  "trends": {
+    "2023": {
+      "incomplete_dates": 2,
+      "annual": {
+        "total": 400,
+        "domains": {
+          "Agents": 3,
+          "CV/VLM": 55,
+          "Chem/Materials/Energy": 36,
+          "Edge/Systems": 60,
+          "Health/Bio": 51,
+          "NLP/LLM": 33,
+          "OR/Finance": 13,
+          "Other": 72,
+          "Quantum": 6,
+          "Robotics": 21,
+          "SE/Formal": 15,
+          "Security/Privacy": 13,
+          "Speech": 22
+        },
+        "llm_titles": 3
+      },
+      "matched": {
+        "total": 355,
+        "domains": {
+          "Agents": 2,
+          "CV/VLM": 50,
+          "Chem/Materials/Energy": 34,
+          "Edge/Systems": 52,
+          "Health/Bio": 44,
+          "NLP/LLM": 30,
+          "OR/Finance": 9,
+          "Other": 65,
+          "Quantum": 5,
+          "Robotics": 17,
+          "SE/Formal": 15,
+          "Security/Privacy": 12,
+          "Speech": 20
+        },
+        "llm_titles": 3
+      },
+      "published": {
+        "total": 321,
+        "domains": {
+          "Agents": 1,
+          "CV/VLM": 48,
+          "Chem/Materials/Energy": 28,
+          "Edge/Systems": 51,
+          "Health/Bio": 40,
+          "NLP/LLM": 28,
+          "OR/Finance": 6,
+          "Other": 59,
+          "Quantum": 3,
+          "Robotics": 16,
+          "SE/Formal": 13,
+          "Security/Privacy": 10,
+          "Speech": 18
+        },
+        "llm_titles": 3
+      }
+    },
+    "2024": {
+      "incomplete_dates": 1,
+      "annual": {
+        "total": 375,
+        "domains": {
+          "Agents": 6,
+          "CV/VLM": 63,
+          "Chem/Materials/Energy": 37,
+          "Edge/Systems": 38,
+          "Health/Bio": 38,
+          "NLP/LLM": 48,
+          "OR/Finance": 14,
+          "Other": 58,
+          "Quantum": 9,
+          "Robotics": 21,
+          "SE/Formal": 12,
+          "Security/Privacy": 15,
+          "Speech": 16
+        },
+        "llm_titles": 22
+      },
+      "matched": {
+        "total": 327,
+        "domains": {
+          "Agents": 6,
+          "CV/VLM": 49,
+          "Chem/Materials/Energy": 36,
+          "Edge/Systems": 33,
+          "Health/Bio": 35,
+          "NLP/LLM": 45,
+          "OR/Finance": 11,
+          "Other": 47,
+          "Quantum": 9,
+          "Robotics": 20,
+          "SE/Formal": 12,
+          "Security/Privacy": 11,
+          "Speech": 13
+        },
+        "llm_titles": 19
+      },
+      "published": {
+        "total": 285,
+        "domains": {
+          "Agents": 3,
+          "CV/VLM": 42,
+          "Chem/Materials/Energy": 27,
+          "Edge/Systems": 33,
+          "Health/Bio": 32,
+          "NLP/LLM": 33,
+          "OR/Finance": 11,
+          "Other": 42,
+          "Quantum": 9,
+          "Robotics": 20,
+          "SE/Formal": 11,
+          "Security/Privacy": 11,
+          "Speech": 11
+        },
+        "llm_titles": 10
+      }
+    },
+    "2025": {
+      "incomplete_dates": 1,
+      "annual": {
+        "total": 367,
+        "domains": {
+          "Agents": 6,
+          "CV/VLM": 62,
+          "Chem/Materials/Energy": 23,
+          "Edge/Systems": 32,
+          "Health/Bio": 43,
+          "NLP/LLM": 53,
+          "OR/Finance": 10,
+          "Other": 66,
+          "Quantum": 16,
+          "Robotics": 14,
+          "SE/Formal": 12,
+          "Security/Privacy": 9,
+          "Speech": 21
+        },
+        "llm_titles": 32
+      },
+      "matched": {
+        "total": 327,
+        "domains": {
+          "Agents": 5,
+          "CV/VLM": 53,
+          "Chem/Materials/Energy": 19,
+          "Edge/Systems": 28,
+          "Health/Bio": 40,
+          "NLP/LLM": 49,
+          "OR/Finance": 9,
+          "Other": 64,
+          "Quantum": 13,
+          "Robotics": 11,
+          "SE/Formal": 12,
+          "Security/Privacy": 7,
+          "Speech": 17
+        },
+        "llm_titles": 29
+      },
+      "published": {
+        "total": 293,
+        "domains": {
+          "Agents": 2,
+          "CV/VLM": 50,
+          "Chem/Materials/Energy": 17,
+          "Edge/Systems": 26,
+          "Health/Bio": 35,
+          "NLP/LLM": 44,
+          "OR/Finance": 7,
+          "Other": 55,
+          "Quantum": 12,
+          "Robotics": 11,
+          "SE/Formal": 11,
+          "Security/Privacy": 7,
+          "Speech": 16
+        },
+        "llm_titles": 27
+      }
+    },
+    "2026": {
+      "incomplete_dates": 0,
+      "annual": {
+        "total": 287,
+        "domains": {
+          "Agents": 13,
+          "CV/VLM": 51,
+          "Chem/Materials/Energy": 16,
+          "Edge/Systems": 15,
+          "Health/Bio": 37,
+          "NLP/LLM": 47,
+          "OR/Finance": 9,
+          "Other": 44,
+          "Quantum": 14,
+          "Robotics": 10,
+          "SE/Formal": 8,
+          "Security/Privacy": 11,
+          "Speech": 8,
+          "Unlearning": 4
+        },
+        "llm_titles": 28
+      },
+      "matched": {
+        "total": 287,
+        "domains": {
+          "Agents": 13,
+          "CV/VLM": 51,
+          "Chem/Materials/Energy": 16,
+          "Edge/Systems": 15,
+          "Health/Bio": 37,
+          "NLP/LLM": 47,
+          "OR/Finance": 9,
+          "Other": 44,
+          "Quantum": 14,
+          "Robotics": 10,
+          "SE/Formal": 8,
+          "Security/Privacy": 11,
+          "Speech": 8,
+          "Unlearning": 4
+        },
+        "llm_titles": 28
+      },
+      "published": {
+        "total": 219,
+        "domains": {
+          "Agents": 6,
+          "CV/VLM": 43,
+          "Chem/Materials/Energy": 15,
+          "Edge/Systems": 14,
+          "Health/Bio": 31,
+          "NLP/LLM": 33,
+          "OR/Finance": 6,
+          "Other": 32,
+          "Quantum": 9,
+          "Robotics": 8,
+          "SE/Formal": 7,
+          "Security/Privacy": 9,
+          "Speech": 5,
+          "Unlearning": 1
+        },
+        "llm_titles": 17
+      }
+    }
+  },
+  "sources": [
+    [
+      "OpenAlex institution",
+      1981
+    ],
+    [
+      "OpenAlex affiliation text",
+      659
+    ],
+    [
+      "Author snowball",
+      34
+    ],
+    [
+      "Snowball Crossref follow-up",
+      0
+    ],
+    [
+      "DBLP via SPARQL",
+      79
+    ],
+    [
+      "Crossref affiliation search",
+      16
+    ],
+    [
+      "arXiv",
+      4
+    ]
+  ],
+  "openalex_benchmark": 1981,
+  "unconfirmed_candidates": 838,
+  "domains": [
+    [
+      "Other",
+      240
+    ],
+    [
+      "CV/VLM",
+      231
+    ],
+    [
+      "NLP/LLM",
+      181
+    ],
+    [
+      "Health/Bio",
+      169
+    ],
+    [
+      "Edge/Systems",
+      145
+    ],
+    [
+      "Chem/Materials/Energy",
+      112
+    ],
+    [
+      "Speech",
+      67
+    ],
+    [
+      "Robotics",
+      66
+    ],
+    [
+      "Security/Privacy",
+      48
+    ],
+    [
+      "SE/Formal",
+      47
+    ],
+    [
+      "OR/Finance",
+      46
+    ],
+    [
+      "Quantum",
+      45
+    ],
+    [
+      "Agents",
+      28
+    ],
+    [
+      "Unlearning",
+      4
+    ]
+  ],
+  "venues": [
+    [
+      "arXiv (Cornell University)",
+      153
+    ],
+    [
+      "Lecture notes in computer science",
+      69
+    ],
+    [
+      "IEEE International Geoscience and Remote Sensing Symposium (IGARSS)",
+      40
+    ],
+    [
+      "International Conference on Communication Systems & Networks (COMSNETS)",
+      30
+    ],
+    [
+      "IEEE Applied Sensing Conference (APSCON)",
+      27
+    ],
+    [
+      "International Conference on AI-ML Systems (AIMLSystems)",
+      27
+    ],
+    [
+      "Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)",
+      22
+    ],
+    [
+      "IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops)",
+      22
+    ],
+    [
+      "IEEE Sensors Letters",
+      22
+    ],
+    [
+      "International Joint Conference on Neural Networks (IJCNN)",
+      22
+    ],
+    [
+      "Wiley eBooks",
+      20
+    ],
+    [
+      "European Signal Processing Conference (EUSIPCO)",
+      18
+    ],
+    [
+      "Conference proceedings/Conference proceedings - IEEE International Conference on Systems, Man, and Cybernetics",
+      14
+    ],
+    [
+      "IEEE International Conference on Acoustics Speech and Signal Processing",
+      14
+    ],
+    [
+      "IEEE Winter Conference on Applications of Computer Vision",
+      14
+    ]
+  ],
+  "cities": {
+    "Bangalore": [
+      {
+        "name": "M Girish Chandra",
+        "topics": [
+          "Quantum",
+          "Edge/Systems",
+          "Chem/Materials/Energy"
+        ],
+        "papers": 37
+      },
+      {
+        "name": "A Anil Kumar",
+        "topics": [
+          "Robotics",
+          "CV/VLM",
+          "Edge/Systems"
+        ],
+        "papers": 27
+      },
+      {
+        "name": "Jayavardhana Gubbi",
+        "topics": [
+          "Health/Bio",
+          "CV/VLM",
+          "Other"
+        ],
+        "papers": 22
+      },
+      {
+        "name": "Kaushik Das",
+        "topics": [
+          "Robotics",
+          "Chem/Materials/Energy",
+          "CV/VLM"
+        ],
+        "papers": 22
+      },
+      {
+        "name": "Ankit Khandelwal",
+        "topics": [
+          "Quantum",
+          "Chem/Materials/Energy",
+          "Other"
+        ],
+        "papers": 21
+      },
+      {
+        "name": "Vighnesh Vatsal",
+        "topics": [
+          "Robotics",
+          "CV/VLM",
+          "Chem/Materials/Energy"
+        ],
+        "papers": 17
+      },
+      {
+        "name": "Raveendra Kumar Medicherla",
+        "topics": [
+          "SE/Formal",
+          "NLP/LLM",
+          "Other"
+        ],
+        "papers": 16
+      },
+      {
+        "name": "Rolif Lima",
+        "topics": [
+          "Robotics",
+          "CV/VLM",
+          "Chem/Materials/Energy"
+        ],
+        "papers": 16
+      },
+      {
+        "name": "Kriti Kumar",
+        "topics": [
+          "Edge/Systems",
+          "CV/VLM",
+          "Speech"
+        ],
+        "papers": 15
+      },
+      {
+        "name": "Prabhat Anand",
+        "topics": [
+          "Quantum",
+          "Chem/Materials/Energy",
+          "Speech"
+        ],
+        "papers": 12
+      },
+      {
+        "name": "Shrishti Pradhan",
+        "topics": [
+          "SE/Formal",
+          "NLP/LLM",
+          "Agents"
+        ],
+        "papers": 5
+      }
+    ],
+    "Bhubaneswar": [
+      {
+        "name": "Hemant Kumar Rath",
+        "topics": [
+          "Edge/Systems",
+          "CV/VLM",
+          "Other"
+        ],
+        "papers": 18
+      }
+    ],
+    "Chennai": [
+      {
+        "name": "Suparshva Jain",
+        "topics": [
+          "Other",
+          "NLP/LLM",
+          "Security/Privacy"
+        ],
+        "papers": 3
+      },
+      {
+        "name": "Chandrasekhar Anantaram",
+        "topics": [
+          "NLP/LLM",
+          "Security/Privacy"
+        ],
+        "papers": 2
+      }
+    ],
+    "Delhi": [
+      {
+        "name": "Mayur Patidar",
+        "topics": [
+          "NLP/LLM",
+          "SE/Formal",
+          "Other"
+        ],
+        "papers": 5
+      },
+      {
+        "name": "Muskan Gupta",
+        "topics": [
+          "Other"
+        ],
+        "papers": 4
+      },
+      {
+        "name": "Aditya Kanade",
+        "topics": [
+          "NLP/LLM",
+          "Other"
+        ],
+        "papers": 2
+      },
+      {
+        "name": "Jyoti Narwariya",
+        "topics": [
+          "Other"
+        ],
+        "papers": 2
+      },
+      {
+        "name": "Priyanka Gupta",
+        "topics": [
+          "Other"
+        ],
+        "papers": 1
+      }
+    ],
+    "Hyderabad": [
+      {
+        "name": "Arijit Roy",
+        "topics": [
+          "Health/Bio",
+          "Chem/Materials/Energy",
+          "NLP/LLM"
+        ],
+        "papers": 18
+      },
+      {
+        "name": "Rajgopal Srinivasan",
+        "topics": [
+          "Health/Bio",
+          "NLP/LLM",
+          "CV/VLM"
+        ],
+        "papers": 16
+      },
+      {
+        "name": "Sanjay P. Bhat",
+        "topics": [
+          "OR/Finance",
+          "Edge/Systems",
+          "Other"
+        ],
+        "papers": 15
+      },
+      {
+        "name": "Ashok Urlana",
+        "topics": [
+          "NLP/LLM",
+          "Unlearning",
+          "CV/VLM"
+        ],
+        "papers": 13
+      },
+      {
+        "name": "Sowmya Ramaswamy Krishnan",
+        "topics": [
+          "Health/Bio",
+          "Chem/Materials/Energy",
+          "NLP/LLM"
+        ],
+        "papers": 12
+      }
+    ],
+    "Kolkata": [
+      {
+        "name": "Arpan Pal",
+        "topics": [
+          "CV/VLM",
+          "Health/Bio",
+          "Edge/Systems"
+        ],
+        "papers": 112
+      },
+      {
+        "name": "Tapas Chakravarty",
+        "topics": [
+          "CV/VLM",
+          "Health/Bio",
+          "Edge/Systems"
+        ],
+        "papers": 57
+      },
+      {
+        "name": "Manjira Sinha",
+        "topics": [
+          "CV/VLM",
+          "NLP/LLM",
+          "Other"
+        ],
+        "papers": 54
+      },
+      {
+        "name": "Tirthankar Dasgupta",
+        "topics": [
+          "NLP/LLM",
+          "CV/VLM",
+          "Other"
+        ],
+        "papers": 46
+      },
+      {
+        "name": "Avik Ghose",
+        "topics": [
+          "Health/Bio",
+          "CV/VLM",
+          "Edge/Systems"
+        ],
+        "papers": 45
+      },
+      {
+        "name": "Aniruddha Sinha",
+        "topics": [
+          "Health/Bio",
+          "CV/VLM",
+          "Other"
+        ],
+        "papers": 38
+      },
+      {
+        "name": "Brojeshwar Bhowmick",
+        "topics": [
+          "CV/VLM",
+          "Robotics",
+          "Other"
+        ],
+        "papers": 26
+      },
+      {
+        "name": "S. Dey",
+        "topics": [
+          "Edge/Systems",
+          "CV/VLM",
+          "Health/Bio"
+        ],
+        "papers": 26
+      },
+      {
+        "name": "Chirabrata Bhaumik",
+        "topics": [
+          "Speech",
+          "Edge/Systems",
+          "Chem/Materials/Energy"
+        ],
+        "papers": 23
+      },
+      {
+        "name": "Arijit Mukherjee",
+        "topics": [
+          "Edge/Systems",
+          "CV/VLM",
+          "Other"
+        ],
+        "papers": 17
+      },
+      {
+        "name": "Anwesha Khasnobish",
+        "topics": [
+          "CV/VLM",
+          "Security/Privacy",
+          "Health/Bio"
+        ],
+        "papers": 16
+      },
+      {
+        "name": "Arijit Ukil",
+        "topics": [
+          "Edge/Systems",
+          "Health/Bio",
+          "Other"
+        ],
+        "papers": 14
+      },
+      {
+        "name": "Shalini Mukhopadhyay",
+        "topics": [
+          "Edge/Systems",
+          "Health/Bio",
+          "CV/VLM"
+        ],
+        "papers": 14
+      }
+    ],
+    "Mumbai": [
+      {
+        "name": "Rekha Singhal",
+        "topics": [
+          "Edge/Systems",
+          "Other",
+          "NLP/LLM"
+        ],
+        "papers": 47
+      },
+      {
+        "name": "Srinivasu Pappula",
+        "topics": [
+          "Other",
+          "CV/VLM",
+          "Health/Bio"
+        ],
+        "papers": 27
+      },
+      {
+        "name": "Sunil Kumar Kopparapu",
+        "topics": [
+          "Speech",
+          "Health/Bio"
+        ],
+        "papers": 24
+      },
+      {
+        "name": "Dineshkumar Singh",
+        "topics": [
+          "Other",
+          "Security/Privacy",
+          "Speech"
+        ],
+        "papers": 22
+      },
+      {
+        "name": "Manoj Karunakaran Nambiar",
+        "topics": [
+          "NLP/LLM",
+          "Edge/Systems",
+          "Quantum"
+        ],
+        "papers": 21
+      },
+      {
+        "name": "Sanat Sarangi",
+        "topics": [
+          "Other",
+          "Health/Bio",
+          "Speech"
+        ],
+        "papers": 19
+      },
+      {
+        "name": "Swagatam Bose Choudhury",
+        "topics": [
+          "Other",
+          "Health/Bio",
+          "Security/Privacy"
+        ],
+        "papers": 13
+      }
+    ],
+    "New Delhi": [
+      {
+        "name": "Lovekesh Vig",
+        "topics": [
+          "NLP/LLM",
+          "Other",
+          "CV/VLM"
+        ],
+        "papers": 47
+      },
+      {
+        "name": "Chayan Sarkar",
+        "topics": [
+          "Robotics",
+          "NLP/LLM",
+          "CV/VLM"
+        ],
+        "papers": 13
+      },
+      {
+        "name": "Gautam Shroff",
+        "topics": [
+          "Other",
+          "NLP/LLM",
+          "OR/Finance"
+        ],
+        "papers": 13
+      },
+      {
+        "name": "Ramya Hebbalaguppe",
+        "topics": [
+          "CV/VLM",
+          "Other",
+          "NLP/LLM"
+        ],
+        "papers": 13
+      },
+      {
+        "name": "Vikram Jamwal",
+        "topics": [
+          "CV/VLM",
+          "Health/Bio",
+          "Speech"
+        ],
+        "papers": 11
+      },
+      {
+        "name": "Jyotsana Khatri",
+        "topics": [
+          "NLP/LLM",
+          "Other",
+          "CV/VLM"
+        ],
+        "papers": 7
+      },
+      {
+        "name": "Amit Sangroya",
+        "topics": [
+          "NLP/LLM",
+          "Security/Privacy",
+          "Other"
+        ],
+        "papers": 6
+      },
+      {
+        "name": "Shubham Singh Paliwal",
+        "topics": [
+          "CV/VLM",
+          "NLP/LLM"
+        ],
+        "papers": 6
+      },
+      {
+        "name": "Kunwar Zaid",
+        "topics": [
+          "NLP/LLM"
+        ],
+        "papers": 3
+      },
+      {
+        "name": "Monika Sharma (A5101897117)",
+        "topics": [
+          "CV/VLM",
+          "Other"
+        ],
+        "papers": 3
+      },
+      {
+        "name": "Arushi Jain",
+        "topics": [
+          "CV/VLM",
+          "NLP/LLM"
+        ],
+        "papers": 2
+      },
+      {
+        "name": "Shubham Gandhi",
+        "topics": [
+          "Agents",
+          "NLP/LLM"
+        ],
+        "papers": 2
+      },
+      {
+        "name": "Arushi Jain (A5067449236)",
+        "topics": [
+          "CV/VLM"
+        ],
+        "papers": 1
+      },
+      {
+        "name": "Manu Sheoran",
+        "topics": [
+          "Other"
+        ],
+        "papers": 1
+      },
+      {
+        "name": "Meghal Dani",
+        "topics": [
+          "Other"
+        ],
+        "papers": 1
+      }
+    ],
+    "Pune": [
+      {
+        "name": "Beena Rai",
+        "topics": [
+          "Chem/Materials/Energy",
+          "Other",
+          "CV/VLM"
+        ],
+        "papers": 72
+      },
+      {
+        "name": "Venkataramana Runkana",
+        "topics": [
+          "Chem/Materials/Energy",
+          "CV/VLM",
+          "NLP/LLM"
+        ],
+        "papers": 68
+      },
+      {
+        "name": "Manasi S. Patwardhan",
+        "topics": [
+          "Other",
+          "NLP/LLM",
+          "SE/Formal"
+        ],
+        "papers": 44
+      },
+      {
+        "name": "Sachin Lodha",
+        "topics": [
+          "Security/Privacy",
+          "Other",
+          "NLP/LLM"
+        ],
+        "papers": 34
+      },
+      {
+        "name": "Vinay Kulkarni",
+        "topics": [
+          "Other",
+          "SE/Formal",
+          "NLP/LLM"
+        ],
+        "papers": 34
+      },
+      {
+        "name": "Shailesh Shankar Deshpande",
+        "topics": [
+          "CV/VLM",
+          "Other",
+          "NLP/LLM"
+        ],
+        "papers": 30
+      },
+      {
+        "name": "Shirish Subhash Karande",
+        "topics": [
+          "NLP/LLM",
+          "Speech",
+          "Chem/Materials/Energy"
+        ],
+        "papers": 30
+      },
+      {
+        "name": "Preethu Rose Anish",
+        "topics": [
+          "NLP/LLM",
+          "Other",
+          "SE/Formal"
+        ],
+        "papers": 26
+      },
+      {
+        "name": "Girish Keshav Palshikar",
+        "topics": [
+          "NLP/LLM",
+          "Other",
+          "OR/Finance"
+        ],
+        "papers": 24
+      },
+      {
+        "name": "Parijat Deshpande",
+        "topics": [
+          "Other",
+          "Edge/Systems",
+          "Chem/Materials/Energy"
+        ],
+        "papers": 19
+      },
+      {
+        "name": "Nitin Ramrakhiyani",
+        "topics": [
+          "NLP/LLM",
+          "OR/Finance",
+          "SE/Formal"
+        ],
+        "papers": 17
+      },
+      {
+        "name": "Sachin Sharad Pawar",
+        "topics": [
+          "NLP/LLM",
+          "OR/Finance",
+          "Other"
+        ],
+        "papers": 17
+      },
+      {
+        "name": "Vivek Srivastava",
+        "topics": [
+          "NLP/LLM",
+          "Other",
+          "CV/VLM"
+        ],
+        "papers": 17
+      },
+      {
+        "name": "Manish Shukla",
+        "topics": [
+          "Other",
+          "NLP/LLM",
+          "Security/Privacy"
+        ],
+        "papers": 14
+      },
+      {
+        "name": "Smita S. Ghaisas",
+        "topics": [
+          "NLP/LLM",
+          "Other",
+          "SE/Formal"
+        ],
+        "papers": 14
+      },
+      {
+        "name": "Asha Rajbhoj",
+        "topics": [
+          "SE/Formal",
+          "Other",
+          "NLP/LLM"
+        ],
+        "papers": 13
+      },
+      {
+        "name": "Dharmendr Kumar",
+        "topics": [
+          "Chem/Materials/Energy",
+          "Health/Bio",
+          "Edge/Systems"
+        ],
+        "papers": 13
+      },
+      {
+        "name": "Savita Bhat",
+        "topics": [
+          "NLP/LLM",
+          "Other",
+          "CV/VLM"
+        ],
+        "papers": 13
+      },
+      {
+        "name": "Venkata Sudheendra Buddhiraju",
+        "topics": [
+          "Chem/Materials/Energy",
+          "CV/VLM",
+          "Other"
+        ],
+        "papers": 13
+      },
+      {
+        "name": "Manoj M. Apte",
+        "topics": [
+          "NLP/LLM",
+          "OR/Finance",
+          "Other"
+        ],
+        "papers": 12
+      },
+      {
+        "name": "Bilal Muhammed",
+        "topics": [
+          "Other",
+          "NLP/LLM",
+          "Chem/Materials/Energy"
+        ],
+        "papers": 11
+      },
+      {
+        "name": "Rakesh Kumar Gupta",
+        "topics": [
+          "Chem/Materials/Energy",
+          "Other",
+          "CV/VLM"
+        ],
+        "papers": 11
+      },
+      {
+        "name": "Ritam Majumdar",
+        "topics": [
+          "Chem/Materials/Energy",
+          "Health/Bio"
+        ],
+        "papers": 7
+      },
+      {
+        "name": "Vishal Jadhav",
+        "topics": [
+          "Chem/Materials/Energy",
+          "Speech"
+        ],
+        "papers": 7
+      },
+      {
+        "name": "Ashutosh Ranjan",
+        "topics": [
+          "CV/VLM",
+          "Other",
+          "NLP/LLM"
+        ],
+        "papers": 5
+      },
+      {
+        "name": "Anirudh Deodhar",
+        "topics": [
+          "Chem/Materials/Energy",
+          "SE/Formal"
+        ],
+        "papers": 4
+      },
+      {
+        "name": "Shabbirhussain Bhaisaheb",
+        "topics": [
+          "NLP/LLM"
+        ],
+        "papers": 3
+      },
+      {
+        "name": "Aseem Arora",
+        "topics": [
+          "NLP/LLM"
+        ],
+        "papers": 2
+      },
+      {
+        "name": "Ayush Agarwal",
+        "topics": [
+          "NLP/LLM"
+        ],
+        "papers": 1
+      }
+    ],
+    "City unspecified": [
+      {
+        "name": "Aniketh Garikaparthi",
+        "topics": [
+          "Other",
+          "NLP/LLM",
+          "OR/Finance"
+        ],
+        "papers": 8
+      },
+      {
+        "name": "Indrajit Bhattacharya",
+        "topics": [
+          "NLP/LLM",
+          "Other"
+        ],
+        "papers": 7
+      },
+      {
+        "name": "Harshit Nigam",
+        "topics": [
+          "Other",
+          "NLP/LLM"
+        ],
+        "papers": 3
+      },
+      {
+        "name": "Jai Bardhan",
+        "topics": [
+          "CV/VLM",
+          "Agents"
+        ],
+        "papers": 3
+      },
+      {
+        "name": "Ninad Joshi",
+        "topics": [
+          "Other",
+          "CV/VLM"
+        ],
+        "papers": 2
+      },
+      {
+        "name": "Ankita Sontakke",
+        "topics": [
+          "SE/Formal"
+        ],
+        "papers": 1
+      },
+      {
+        "name": "Avinash Singh",
+        "topics": [
+          "Other"
+        ],
+        "papers": 1
+      },
+      {
+        "name": "Ayush Pandey",
+        "topics": [
+          "Agents"
+        ],
+        "papers": 1
+      },
+      {
+        "name": "Hiranmay Ghosh",
+        "topics": [
+          "Edge/Systems"
+        ],
+        "papers": 1
+      },
+      {
+        "name": "Ishita Jain",
+        "topics": [
+          "Agents"
+        ],
+        "papers": 1
+      },
+      {
+        "name": "Pushpdeep Singh",
+        "topics": [
+          "NLP/LLM"
+        ],
+        "papers": 1
+      },
+      {
+        "name": "Rajaswa Patil",
+        "topics": [
+          "NLP/LLM"
+        ],
+        "papers": 1
+      },
+      {
+        "name": "Rohan Raju Dhanakshirur",
+        "topics": [
+          "Agents"
+        ],
+        "papers": 1
+      },
+      {
+        "name": "Snigdha Paul",
+        "topics": [
+          "Unlearning"
+        ],
+        "papers": 1
+      }
+    ]
+  },
+  "focus": [
+    {
+      "name": "Unlearning",
+      "intro": "Papers classified as Unlearning and titles matching related terms such as forgetting, leakage and attribution.",
+      "papers": [
+        {
+          "title": "Alignment Faking Depends on the Value, Not Just the Model",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2611.03650"
+        },
+        {
+          "title": "Can Scientific Claims Be Removed from Large Language Models? A Systematic Evaluation of Claim-Level Unlearning",
+          "year": 2026,
+          "venue": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2608.20960"
+        },
+        {
+          "title": "Correlation-Weighted KAN Attribution for Explainable AF Detection using Single-Lead ECG",
+          "year": 2026,
+          "venue": "IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/percomworkshops68308.2026.11585295"
+        },
+        {
+          "title": "DoTA: Latent Distribution Conditioned Data Attribution for Diffusion Models",
+          "year": 2026,
+          "venue": "IEEE Winter Conference on Applications of Computer Vision",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/wacv61042.2026.00201"
+        },
+        {
+          "title": "Forgetting is Competition: Rethinking Unlearning as Representation Interference in Diffusion Models",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2603.00975"
+        },
+        {
+          "title": "Learning from Giants: Attribution-Aligned Knowledge Distillation for Interpretable ELL Essay Assessment",
+          "year": 2026,
+          "venue": "Lecture notes in computer science",
+          "status": "Published",
+          "url": "https://doi.org/10.1007/978-3-032-29763-1_18"
+        },
+        {
+          "title": "MapRoute++: Surrogate-Guided Semantic Routing for Visual Concept Unlearning",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2608.13478"
+        },
+        {
+          "title": "Shadow Unlearning: A Neuro-Semantic Approach to Fidelity-Preserving Faceless Forgetting in LLMs",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2601.04275"
+        },
+        {
+          "title": "The Silent Brush: Evaluating Artistic Style Leakage in AI Art Generation",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2605.17500"
+        },
+        {
+          "title": "QueryShield: A Platform to Mitigate Enterprise Data Leakage in Queries to External LLMs",
+          "year": 2025,
+          "venue": "Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL-HLT)",
+          "status": "Published",
+          "url": "https://doi.org/10.18653/v1/2025.naacl-industry.30"
+        },
+        {
+          "title": "Real-Time Remote Localization of Gas Pipe Leakage Using Acoustic Beamforming and Spatial Filtering—A Lightweight Approach",
+          "year": 2025,
+          "venue": "IEEE Sensors Letters",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/lsens.2025.3574858"
+        },
+        {
+          "title": "The Realignment Problem: When Right becomes Wrong in LLMs",
+          "year": 2025,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2511.02623"
+        },
+        {
+          "title": "ReMOVE: A Reference-free Metric for Object Erasure",
+          "year": 2024,
+          "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2409.00707"
+        }
+      ]
+    },
+    {
+      "name": "SLM, efficient models and edge",
+      "intro": "Title matches cover small models, compression, distillation, on-device computing and related terms.",
+      "papers": [
+        {
+          "title": "Affordance-Aware Manipulation using Knowledge Graph and Structured Reasoning",
+          "year": 2026,
+          "venue": "International Joint Conference on Neural Networks (IJCNN)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/ijcnn69854.2026.11729691"
+        },
+        {
+          "title": "An FPGA-Based Secure and Privacy-Aware RISC-V SoC with a CNN Accelerator for Edge AI",
+          "year": 2026,
+          "venue": "International Conference on VLSI Design",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/vlsid68508.2026.00016"
+        },
+        {
+          "title": "Cutting-Edge Bioanalytical Transducers for Mycotoxin Surveillance: A Review",
+          "year": 2026,
+          "venue": "IEEE Sensors Journal",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/jsen.2026.3681032"
+        },
+        {
+          "title": "Demo Abstract: CardioGenie: Turning Physiological Sensing into Prescriptive Cardiology at Edge with Medical Small Language Model",
+          "year": 2026,
+          "venue": "ACM/IEEE International Conference on Embedded Artificial Intelligence and Sensing Systems - Posters and Demos (SenSys-Adjunct)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/sensys-adjunct71932.2026.00019"
+        },
+        {
+          "title": "Edge-Native Agentic AI for Scalable Knowledge Systems in Industrial Applications",
+          "year": 2026,
+          "venue": "ACM International Conference on Information and Knowledge Management (CIKM)",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3799682.3839254"
+        },
+        {
+          "title": "Learning from Giants: Attribution-Aligned Knowledge Distillation for Interpretable ELL Essay Assessment",
+          "year": 2026,
+          "venue": "Lecture notes in computer science",
+          "status": "Published",
+          "url": "https://doi.org/10.1007/978-3-032-29763-1_18"
+        },
+        {
+          "title": "Leveraging LLMs and Heterogeneous Knowledge Graphs for Persona-Driven Session-Based Recommendation",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2604.06928"
+        },
+        {
+          "title": "Multi-View Contract Graph: A Knowledge Graph-Based Retrieval Framework for Contract Information Extraction",
+          "year": 2026,
+          "venue": null,
+          "status": "Published",
+          "url": "https://doi.org/10.18653/2026.nora-1.5"
+        },
+        {
+          "title": "POLARIS: A Gödel Agent Framework for Small Language Models through Experience-Abstracted Policy Repair",
+          "year": 2026,
+          "venue": "Findings of the Association for Computational Linguistics: ACL (Findings of ACL)",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2603.23129"
+        },
+        {
+          "title": "RAPiD: Reward-Guided Consistency Distillation of Diffusion Planners for Real-Time Autonomous Driving",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2602.07339"
+        },
+        {
+          "title": "Reconfigurable Intelligent Surface (RIS) Design with A Novel Bit-Quantization Method for Precise Beam-Tilt Operation",
+          "year": 2026,
+          "venue": "URSI General Assembly and Scientific Symposium",
+          "status": "Published",
+          "url": "https://doi.org/10.46620/ursigass26/yghj2382"
+        },
+        {
+          "title": "S 2 -CIM: A 53.9 TOPS/W SRAM-based Sign-bit-Aware Multibit Compute-In-Memory Architecture for Edge-AI Inference",
+          "year": 2026,
+          "venue": "IEEE Interregional NEWCAS Conference (NEWCAS)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/newcas64543.2026.11674054"
+        },
+        {
+          "title": "SimScore: A Similarity Score for Spiking Neurons",
+          "year": 2026,
+          "venue": "Neuro Inspired Computational Elements Conference (NICE)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/nice69539.2026.11567501"
+        },
+        {
+          "title": "STARK: A Comprehensive Framework for PLC Structured Text Assistant for Reasoning and Knowledge",
+          "year": 2026,
+          "venue": "Innovations in Software Engineering Conference (ISEC)",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3796563.3796575"
+        },
+        {
+          "title": "Surrogate Gradient Descent Based Spiking Intrusion Detection System for Edge Devices: A Performance Study",
+          "year": 2026,
+          "venue": "Communications in computer and information science",
+          "status": "Published",
+          "url": "https://doi.org/10.1007/978-3-032-19099-4_28"
+        },
+        {
+          "title": "TinyML Based Detection of Alcohol Induced Abnormalities Using ECG Signals and Metadata",
+          "year": 2026,
+          "venue": "IEEE Applied Sensing Conference (APSCON)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/apscon68325.2026.11497074"
+        },
+        {
+          "title": "A Knowledge Graph-based Retrieval-Augmented Generation Framework for Algorithm Selection in the Facility Layout Problem",
+          "year": 2025,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2509.18054"
+        },
+        {
+          "title": "AdaptBot: Combining LLM with Knowledge Graphs and Human Input for Generic-to-Specific Task Decomposition and Knowledge Refinement",
+          "year": 2025,
+          "venue": "Proceedings - IEEE International Conference on Robotics and Automation/Proceedings",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2502.02067"
+        },
+        {
+          "title": "ArchTune: A Predictive Energy Estimation Framework for LLM Inference on Edge Accelerators",
+          "year": 2025,
+          "venue": "International Conference on AI-ML Systems (AIMLSystems)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/aimlsystems67835.2025.11373945"
+        },
+        {
+          "title": "CADAEC: Content-Aware Deployment of AI Workloads in Edge-Cloud Ecosystem",
+          "year": 2025,
+          "venue": "ACM/SPEC International Conference on Performance Engineering (ICPE)",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3676151.3719355"
+        },
+        {
+          "title": "Distributed Sensing and Collaborative Edge Computing for LEO Constellations",
+          "year": 2025,
+          "venue": "International Conference on Communication Systems & Networks (COMSNETS)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/comsnets63942.2025.10885635"
+        },
+        {
+          "title": "DLA-HybridNet: Governance-Aware Edge Segmentation via Hybrid Aggregation Distillation",
+          "year": 2025,
+          "venue": "Joint International Conference on Data Science & Management of Data (CODS-COMAD)",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3799830.3799845"
+        },
+        {
+          "title": "ELM-Split: Energy-Latency-Memory Aware Splitting of DNN Models in Edge-Cloud Ecosystem",
+          "year": 2025,
+          "venue": "International Conference on AI-ML Systems (AIMLSystems)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/aimlsystems67835.2025.11330640"
+        },
+        {
+          "title": "Enhancing Message Sequence Charts with Spatial Knowledge",
+          "year": 2025,
+          "venue": "Lecture notes in computer science",
+          "status": "Published",
+          "url": "https://doi.org/10.1007/978-981-96-8186-0_18"
+        },
+        {
+          "title": "GRU-RVCIM: Efficient Implementation of Gated Recurrent Unit in RISC-V—Compute-in-Memory Co-Designed for Edge Applications",
+          "year": 2025,
+          "venue": "IEEE Embedded Systems Letters",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/les.2025.3644936"
+        },
+        {
+          "title": "Intelligence-enabled IoT with Gen AI, Powered by Model Compression and Optimization",
+          "year": 2025,
+          "venue": "ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp)",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3714394.3750571"
+        },
+        {
+          "title": "Know Thyself: Validating Knowledge Awareness of LLM-based Persona Agents",
+          "year": 2025,
+          "venue": "Workshop on Trustworthy NLP (TrustNLP)",
+          "status": "Published",
+          "url": "https://doi.org/10.18653/v1/2025.trustnlp-main.22"
+        },
+        {
+          "title": "Knowledge augmented generalizer specializer: A framework for early stage design exploration",
+          "year": 2025,
+          "venue": "Advanced Engineering Informatics",
+          "status": "Published",
+          "url": "https://doi.org/10.1016/j.aei.2025.103141"
+        },
+        {
+          "title": "Knowledge-Augmented Intelligent Bot Framework for Enabling Accessible Design",
+          "year": 2025,
+          "venue": "Proceedings of the International AAAI Conference on Web and Social Media",
+          "status": "Published",
+          "url": "https://doi.org/10.1609/icwsm.v19i1.35966"
+        },
+        {
+          "title": "Low-Power FPGA Implementation of Spiking Neural Networks with Optimized Event-Based Encoding",
+          "year": 2025,
+          "venue": "IEEE International Conference on Emerging Electronics (ICEE)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/icee67165.2025.11409777"
+        },
+        {
+          "title": "Matching Tasks with Industry Groups for Augmenting Commonsense Knowledge",
+          "year": 2025,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2505.07440"
+        },
+        {
+          "title": "Microbiome knowledge graph as a tool to understand bacteria-host associations",
+          "year": 2025,
+          "venue": "Archives of Microbiology",
+          "status": "Published",
+          "url": "https://doi.org/10.1007/s00203-025-04413-0"
+        },
+        {
+          "title": "Neuromorphic Approaches for Energy Efficient Object Localization",
+          "year": 2025,
+          "venue": "International Conference on AI-ML Systems (AIMLSystems)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/aimlsystems67835.2025.11330321"
+        },
+        {
+          "title": "NICE: Non-Functional Requirements Identification, Classification, and Explanation Using Small Language Models",
+          "year": 2025,
+          "venue": "IEEE/ACM International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/icse-seip66354.2025.00031"
+        },
+        {
+          "title": "Optimized Domain-Specific Text Processing with Keyword Knowledge Distillation (KKD)",
+          "year": 2025,
+          "venue": "International Joint Conference on Neural Networks (IJCNN)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/ijcnn64981.2025.11227844"
+        },
+        {
+          "title": "Retrieval and Augmentation of Domain Knowledge for Text-to-SQL Semantic Parsing",
+          "year": 2025,
+          "venue": "IEEE ... International Conference on Data Mining workshops",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2510.02394"
+        },
+        {
+          "title": "SPIKECODE: Spiking Autoencoder FrameWork for Lossy Image Compression on Constrained Low-Power Edge Devices",
+          "year": 2025,
+          "venue": "Indian Conference on Computer Vision, Graphics and Image Processing",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3774521.3774562"
+        },
+        {
+          "title": "The Promise of Spiking Neural Networks for Ubiquitous Computing: A Survey and New Perspectives",
+          "year": 2025,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2506.01737"
+        },
+        {
+          "title": "TinyHAR-NAS: Tuning Lightweight Attention Networks for Human Activity Recognition on the Edge",
+          "year": 2025,
+          "venue": "International Joint Conference on Neural Networks (IJCNN)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/ijcnn64981.2025.11229387"
+        },
+        {
+          "title": "Towards On-Device Learning and Personalization: A Case of In-Car Driver Drowsiness Detection System Using Neuromorphic Computing",
+          "year": 2025,
+          "venue": "Lecture notes in computer science",
+          "status": "Published",
+          "url": "https://doi.org/10.1007/978-3-031-87660-8_22"
+        },
+        {
+          "title": "Towards Predicting Inference Latency of TinyML Models",
+          "year": 2025,
+          "venue": "IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/ipdpsw66978.2025.00164"
+        },
+        {
+          "title": "Tuning Distillation to Generate Edge-friendly All-rounder Models",
+          "year": 2025,
+          "venue": "Conference proceedings/Conference proceedings - IEEE International Conference on Systems, Man, and Cybernetics",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/smc58881.2025.11343501"
+        },
+        {
+          "title": "Y-Net: A Compact Edge-Friendly Model for Multi-Modal Medical Image Segmentation",
+          "year": 2025,
+          "venue": "IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/percomworkshops65533.2025.00072"
+        },
+        {
+          "title": "A Genetic Tuner for Fixed-skeleton TinyML Models",
+          "year": 2024,
+          "venue": "IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/percomworkshops59983.2024.10503237"
+        },
+        {
+          "title": "An Edge Refined MAP Based Tomographic Image Reconstruction with Improved Computational Efficiency",
+          "year": 2024,
+          "venue": "IEEE India Conference",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/indicon63790.2024.10958500"
+        },
+        {
+          "title": "Approximation of Koopman Operator using Spiking Neural Networks",
+          "year": 2024,
+          "venue": "IEEE Conference on Decision and Control (CDC)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/cdc56724.2024.10886595"
+        },
+        {
+          "title": "Atrial Fibrillation Detector from ECG on Wearable Edge Devices using Spiking Neural Networks",
+          "year": 2024,
+          "venue": "International Joint Conference on Neural Networks (IJCNN)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/ijcnn60899.2024.10650023"
+        },
+        {
+          "title": "Calibration Transfer via Knowledge Distillation",
+          "year": 2024,
+          "venue": "Lecture notes in computer science",
+          "status": "Published",
+          "url": "https://doi.org/10.1007/978-981-96-0966-6_13"
+        },
+        {
+          "title": "CMC-RMA: Compressed Multi-Coset Range Migration Algorithm for MIMO-SAR",
+          "year": 2024,
+          "venue": "IEEE Radar Conference (RadarConf)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/radarconf2458775.2024.10549354"
+        },
+        {
+          "title": "Crossing New Frontiers: Knowledge-Augmented Large Language Model Prompting for Zero-Shot Text-Based De Novo Molecule Design",
+          "year": 2024,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2408.11866"
+        },
+        {
+          "title": "Demo: Stress Detection on Tiny Edge Device with GSR Sensor",
+          "year": 2024,
+          "venue": "International Conference on Mobile Systems, Applications, and Services",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3643832.3661837"
+        },
+        {
+          "title": "Few-shot Transfer Learning for Knowledge Base Question Answering: Fusing Supervised Models with In-Context Learning",
+          "year": 2024,
+          "venue": "Proceedings of the conference - Association for Computational Linguistics. Meeting",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2311.08894"
+        },
+        {
+          "title": "Gauging, enriching and applying geography knowledge in Pre-trained Language Models",
+          "year": 2024,
+          "venue": "Information Processing & Management",
+          "status": "Published",
+          "url": "https://doi.org/10.1016/j.ipm.2024.103892"
+        },
+        {
+          "title": "Keynote: AutoML for TinyML",
+          "year": 2024,
+          "venue": "2024 IEEE International Conference on Pervasive Computing and Communications Workshops and other Affiliated Events (PerCom Workshops)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/percomworkshops59983.2024.10503558"
+        },
+        {
+          "title": "Knowledge Graph Modeling-Driven Large Language Model Operating System (LLM OS) for Task Automation in Process Engineering Problem-Solving",
+          "year": 2024,
+          "venue": "Proceedings of the AAAI Symposium Series",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2408.14494"
+        },
+        {
+          "title": "Knowledge Induced Transformer Network for Causality Prediction",
+          "year": 2024,
+          "venue": "International World Wide Web Conference (WWW)",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3589335.3651531"
+        },
+        {
+          "title": "Knowledge-driven neural models for extraction and analysis of sustainability events from the web",
+          "year": 2024,
+          "venue": "Environmental Data Science",
+          "status": "Published",
+          "url": "https://doi.org/10.1017/eds.2024.32"
+        },
+        {
+          "title": "Machine learning based knowledge discovery and modeling of silicon content of molten iron from a blast furnace",
+          "year": 2024,
+          "venue": "ChemRxiv",
+          "status": "Preprint",
+          "url": "https://doi.org/10.26434/chemrxiv-2024-51zj6"
+        },
+        {
+          "title": "MCU-based TinyML Camera for Face Recognition",
+          "year": 2024,
+          "venue": "IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/percomworkshops59983.2024.10502805"
+        },
+        {
+          "title": "Multi-Source Knowledge-Based Hybrid Neural Framework for Time Series Representation Learning",
+          "year": 2024,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2408.12409"
+        },
+        {
+          "title": "Parameter-Efficient Quantized Mixture-of-Experts Meets Vision-Language Instruction Tuning for Semiconductor Electron Micrograph Analysis",
+          "year": 2024,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2408.15305"
+        },
+        {
+          "title": "RetinaQA: A Robust Knowledge Base Question Answering Model for both Answerable and Unanswerable Questions",
+          "year": 2024,
+          "venue": "Proceedings of the conference - Association for Computational Linguistics. Meeting",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2403.10849"
+        },
+        {
+          "title": "Retrieval-Augmented Generation Meets Data-Driven Tabula Rasa Approach for Temporal Knowledge Graph Forecasting",
+          "year": 2024,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2408.13273"
+        },
+        {
+          "title": "Scalable and Cost-Effective Edge-Cloud Deployment for Multi-Object Tracking System",
+          "year": 2024,
+          "venue": "IEEE International Conference on Cloud Engineering",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/ic2e61754.2024.00031"
+        },
+        {
+          "title": "Spike frequency adaptation: bridging neural models and neuromorphic applications",
+          "year": 2024,
+          "venue": "Communications Engineering",
+          "status": "Published",
+          "url": "https://doi.org/10.1038/s44172-024-00165-9"
+        },
+        {
+          "title": "Time Series Classification on Edge with Lightweight Attention Networks",
+          "year": 2024,
+          "venue": "IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/percomworkshops59983.2024.10502748"
+        },
+        {
+          "title": "TinyStressNAS: Automated Feature Selection and Model Generation for On-device Stress Detection",
+          "year": 2024,
+          "venue": "ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp)",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3675094.3678497"
+        },
+        {
+          "title": "TinyStressNet: On-device Stress Assessment with Wearable Sensors on Edge Devices",
+          "year": 2024,
+          "venue": "IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/percomworkshops59983.2024.10502631"
+        },
+        {
+          "title": "Towards a Task-agnostic Distillation Methodology for Creating Edge Foundation Models",
+          "year": 2024,
+          "venue": null,
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3662006.3662061"
+        },
+        {
+          "title": "A Light Weight Cardiac Monitoring System for On-device ECG Analysis",
+          "year": 2023,
+          "venue": "Lecture notes in computer science",
+          "status": "Published",
+          "url": "https://doi.org/10.1007/978-3-031-26422-1_49"
+        },
+        {
+          "title": "A Model-driven Approach for Knowledge-based Engineering of Industrial Digital Twins",
+          "year": 2023,
+          "venue": "ACM/IEEE International Conference on Model Driven Engineering Languages and Systems (MODELS)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/models58315.2023.00015"
+        },
+        {
+          "title": "An Edge-inclusive WebRTC-based Framework to Enable Embodied Visual Analytics in Telerobot",
+          "year": 2023,
+          "venue": "International Conference on Communication Systems & Networks (COMSNETS)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/comsnets56262.2023.10041404"
+        },
+        {
+          "title": "Automated Heterogeneous Low-Bit Quantization of Multi-Model Deep Learning Inference Pipeline",
+          "year": 2023,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2311.05870"
+        },
+        {
+          "title": "Binary Convolutional Neural Network for Efficient Gesture Recognition at Edge",
+          "year": 2023,
+          "venue": "International Conference on AI-ML Systems (AIMLSystems)",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3639856.3639874"
+        },
+        {
+          "title": "Demo Abstract: Lightweight Attention Network for Time Series Classification on Edge",
+          "year": 2023,
+          "venue": "ACM Conference on Embedded Networked Sensor Systems (SenSys)",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3625687.3628393"
+        },
+        {
+          "title": "Demo: On-device Puff Detection System for Smoking Cessation",
+          "year": 2023,
+          "venue": "International Conference on Mobile Systems, Applications, and Services",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3581791.3597284"
+        },
+        {
+          "title": "Designing a Bare Minimum Face Recognition Architecture for Bare Metal Edge Devices: An Experience Report",
+          "year": 2023,
+          "venue": "International Conference on AI-ML Systems (AIMLSystems)",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3639856.3639875"
+        },
+        {
+          "title": "DietCNN: Multiplication-free Inference for Quantized CNNs",
+          "year": 2023,
+          "venue": "International Joint Conference on Neural Networks (IJCNN)",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2305.05274"
+        },
+        {
+          "title": "Dig Here! Extracting and Using Knowledge from Financial Audit Reports",
+          "year": 2023,
+          "venue": "Proceedings of the ... International Florida Artificial Intelligence Research Society Conference",
+          "status": "Published",
+          "url": "https://doi.org/10.32473/flairs.36.133265"
+        },
+        {
+          "title": "Distributed Knowledge Management",
+          "year": 2023,
+          "venue": "Wiley eBooks",
+          "status": "Published",
+          "url": "https://doi.org/10.1002/9781119825968.ch15"
+        },
+        {
+          "title": "Distributed Ledger",
+          "year": 2023,
+          "venue": "Wiley eBooks",
+          "status": "Published",
+          "url": "https://doi.org/10.1002/9781119825968.ch17"
+        },
+        {
+          "title": "Do I have the Knowledge to Answer? Investigating Answerability of Knowledge Base Questions",
+          "year": 2023,
+          "venue": "Proceedings of the conference - Association for Computational Linguistics. Meeting",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2212.10189"
+        },
+        {
+          "title": "Evaluation Metrics for Depth and Flow of Knowledge in Non-fiction Narrative Texts",
+          "year": 2023,
+          "venue": "Workshop on Narrative Understanding (WNU)",
+          "status": "Published",
+          "url": "https://doi.org/10.18653/v1/2023.wnu-1.4"
+        },
+        {
+          "title": "Knowledge Transfer for Pseudo-code Generation from Low Resource Programming Language",
+          "year": 2023,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2303.09062"
+        },
+        {
+          "title": "Knowledge-based Extraction of Cause–Effect Relations from Biomedical Text",
+          "year": 2023,
+          "venue": "Lecture notes in electrical engineering",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2103.06078"
+        },
+        {
+          "title": "Knowledge-driven Analytics and Systems Impacting Human Quality of Life- Neurosymbolic AI, Explainable AI and Beyond",
+          "year": 2023,
+          "venue": "ACM International Conference on Information and Knowledge Management (CIKM)",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3583780.3615300"
+        },
+        {
+          "title": "Low Power & Low Latency Cloud Cover Detection in Small Satellites Using On-board Neuromorphic Processors",
+          "year": 2023,
+          "venue": "International Joint Conference on Neural Networks (IJCNN)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/ijcnn54540.2023.10191569"
+        },
+        {
+          "title": "Low-Power Lossless Image Compression on Small Satellite Edge using Spiking Neural Network",
+          "year": 2023,
+          "venue": "International Joint Conference on Neural Networks (IJCNN)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/ijcnn54540.2023.10191704"
+        },
+        {
+          "title": "MatSciRE: Leveraging pointer networks to automate entity and relation extraction for material science knowledge-base construction",
+          "year": 2023,
+          "venue": "Computational Materials Science",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2401.09839"
+        },
+        {
+          "title": "PuffConv: A System for Online and On-device Puff Detection for Smoking Cessation",
+          "year": 2023,
+          "venue": "IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/percomworkshops56833.2023.10150280"
+        },
+        {
+          "title": "RINX: A system for information and knowledge extraction from resumes",
+          "year": 2023,
+          "venue": "Data & Knowledge Engineering",
+          "status": "Published",
+          "url": "https://doi.org/10.1016/j.datak.2023.102202"
+        },
+        {
+          "title": "StereoGest-SNN: Robust Gesture Detection With Stereo Acoustic Setup Using Spiking Neural Networks",
+          "year": 2023,
+          "venue": "IEEE International Symposium on Circuits and Systems proceedings",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/iscas46773.2023.10181564"
+        },
+        {
+          "title": "TinyML Demonstration of Time-series Prediction and Vision-based Gesture Recognition",
+          "year": 2023,
+          "venue": "International Conference on AI-ML Systems (AIMLSystems)",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3639856.3639919"
+        },
+        {
+          "title": "Utilizing Prior Knowledge to Improve Automatic Speech Recognition in Human-Robot Interactive Scenarios",
+          "year": 2023,
+          "venue": "ACM/IEEE International Conference on Human-Robot Interaction (HRI)",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3568294.3580129"
+        },
+        {
+          "title": "Zero-shot Probing of Pretrained Language Models for Geography Knowledge",
+          "year": 2023,
+          "venue": "Workshop on Evaluation and Comparison of NLP Systems (Eval4NLP)",
+          "status": "Published",
+          "url": "https://doi.org/10.18653/v1/2023.eval4nlp-1.5"
+        }
+      ]
+    },
+    {
+      "name": "Vision-language and multimodal",
+      "intro": "Title matches cover vision-language models, multimodal work and visual question answering.",
+      "papers": [
+        {
+          "title": "A Modular Vision-Language-Action Robotics Framework for Indoor Environments",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2606.31144"
+        },
+        {
+          "title": "Can Vision-Language Models Assess Environmental Reporting Compliance? A Benchmark for Requirement-Level Disclosure Alignment",
+          "year": 2026,
+          "venue": "Workshop on Natural Language Processing Meets Climate Change (ClimateNLP)",
+          "status": "Published",
+          "url": "https://doi.org/10.18653/2026.climatenlp-1.20"
+        },
+        {
+          "title": "Chain-of-Thought Degrades Visual Spatial Reasoning Capabilities of Multimodal LLMs",
+          "year": 2026,
+          "venue": "Underline Science Inc.",
+          "status": "Published",
+          "url": "https://doi.org/10.48448/sv97-gm40"
+        },
+        {
+          "title": "Do You See Me : A Multidimensional Benchmark for Evaluating Visual Perception in Multimodal LLMs",
+          "year": 2026,
+          "venue": "Underline Science Inc.",
+          "status": "Published",
+          "url": "https://doi.org/10.48448/cxar-ms28"
+        },
+        {
+          "title": "Grounded and Faithful P&ID Reasoning: Constraining Vision-Language Models with Recovered Evidence Graphs",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2609.05880"
+        },
+        {
+          "title": "LLM-Powered Interactive Robotic Action Synthesis from Multimodal Speech, Gestures, and Music",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2606.31158"
+        },
+        {
+          "title": "Refine and Align: Confidence Calibration Through Multi-Agent Interaction in VQA",
+          "year": 2026,
+          "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2511.11169"
+        },
+        {
+          "title": "SciMDR: Advancing Scientific Multimodal Document Reasoning",
+          "year": 2026,
+          "venue": "Proceedings of the conference - Association for Computational Linguistics. Meeting",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2603.12249"
+        },
+        {
+          "title": "See, Hypothesize, Validate: Multimodal Agentic Framework for Discovering Governing PDEs",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2608.27869"
+        },
+        {
+          "title": "Unsupervised Confidence-Aware Fusion for Spatiotemporal Flood Mapping Using Multimodal Remote Sensing Data",
+          "year": 2026,
+          "venue": "IEEE International Geoscience and Remote Sensing Symposium (IGARSS)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/igarss60577.2026.11730235"
+        },
+        {
+          "title": "When Prompts Ignore Structure: Graph-Based Attribute Reasoning for Calibrated VLMs",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2607.07395"
+        },
+        {
+          "title": "Exploring Multimodal Language Models for Sustainability Disclosure Extraction: A Comparative Study",
+          "year": 2025,
+          "venue": "Workshop on Insights from Negative Results in NLP (Insights)",
+          "status": "Published",
+          "url": "https://doi.org/10.18653/v1/2025.insights-1.13"
+        },
+        {
+          "title": "Privacy Preserving Ordinal-Meta Learning with VLMs for Fine-Grained Fruit Quality Prediction",
+          "year": 2025,
+          "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2511.01449"
+        },
+        {
+          "title": "StayLTC: A Cost-Effective Multimodal Framework for Hospital Length of Stay Forecasting",
+          "year": 2025,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2504.05691"
+        },
+        {
+          "title": "Vulnerabilities of Multimodal Fusion Models in Remote Sensing: Analyzing the Impact of Adversarial Attacks on Spatial Data Content",
+          "year": 2025,
+          "venue": "IEEE International Geoscience and Remote Sensing Symposium (IGARSS)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/igarss55030.2025.11243102"
+        },
+        {
+          "title": "Convolutional Analysis Sparse Coding for Multimodal Image Super-Resolution",
+          "year": 2024,
+          "venue": "IEEE Sensors Letters",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/lsens.2024.3403179"
+        },
+        {
+          "title": "Joint Coupled Convolutional Dictionary Learning for Multimodal Image Super-Resolution",
+          "year": 2024,
+          "venue": "IEEE Sensors Letters",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/lsens.2024.3516832"
+        },
+        {
+          "title": "Material Microstructure Design Using VAE-Regression with a Multimodal Prior",
+          "year": 2024,
+          "venue": "Lecture notes in computer science",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2402.17806"
+        },
+        {
+          "title": "Parameter-Efficient Quantized Mixture-of-Experts Meets Vision-Language Instruction Tuning for Semiconductor Electron Micrograph Analysis",
+          "year": 2024,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2408.15305"
+        },
+        {
+          "title": "Preliminary Investigations of a Multi-Faceted Robust and Synergistic Approach in Semiconductor Electron Micrograph Analysis: Integrating Vision Transformers with Large Language and Multimodal Models",
+          "year": 2024,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2408.13621"
+        },
+        {
+          "title": "The Transforter - A Transformer Model to Predict Delays in Multimodal Transportation Networks",
+          "year": 2024,
+          "venue": "IEEE International Conference on Intelligent Transportation Systems (ITSC)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/itsc58415.2024.10920213"
+        },
+        {
+          "title": "CLIPGraphs: Multimodal Graph Networks to Infer Object-Room Affinities",
+          "year": 2023,
+          "venue": "IEEE RO-MAN",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2306.01540"
+        }
+      ]
+    },
+    {
+      "name": "Agents",
+      "intro": "Papers classified in the Agents domain.",
+      "papers": [
+        {
+          "title": "A multi-agent deep reinforcement learning framework for the generative design of alloys and processing routes",
+          "year": 2026,
+          "venue": "International Journal of AI for Materials and Design",
+          "status": "Published",
+          "url": "https://doi.org/10.36922/ijamd025480050"
+        },
+        {
+          "title": "Edge-Native Agentic AI for Scalable Knowledge Systems in Industrial Applications",
+          "year": 2026,
+          "venue": "ACM International Conference on Information and Knowledge Management (CIKM)",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3799682.3839254"
+        },
+        {
+          "title": "From 1D Benchmarks to Complex 3D Geometries: Can Agents Reliably Specify Problems for Automated PDE Simulation?",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2610.41267"
+        },
+        {
+          "title": "LexChronos: An Agentic Framework for Structured Event Timeline Extraction in Indian Jurisprudence",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2603.01651"
+        },
+        {
+          "title": "On Stackelberg Games Based Collaborative Multi-Agent Object Transportation",
+          "year": 2026,
+          "venue": "IEEE International Conference on Automation Science and Engineering (CASE)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/case69030.2026.11704464"
+        },
+        {
+          "title": "PDEFlow: Autonomous Agentic PDE Pipelines for Neural Operator Learning and Solver-Free Inference",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2607.05134"
+        },
+        {
+          "title": "Phantom Consensus: Measuring Social Reasoning in Multi-Agent LLM Decision-Making",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2611.08971"
+        },
+        {
+          "title": "POLARIS: A Gödel Agent Framework for Small Language Models through Experience-Abstracted Policy Repair",
+          "year": 2026,
+          "venue": "Findings of the Association for Computational Linguistics: ACL (Findings of ACL)",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2603.23129"
+        },
+        {
+          "title": "PolySlice: Towards LLM Agents for Program Slicing of Heterogeneous Code Repository",
+          "year": 2026,
+          "venue": "IEEE International Conference on Software Maintenance (ICSM)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/icsme67971.2026.00121"
+        },
+        {
+          "title": "Refine and Align: Confidence Calibration Through Multi-Agent Interaction in VQA",
+          "year": 2026,
+          "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2511.11169"
+        },
+        {
+          "title": "ResearchGym: Evaluating Language Model Agents on Real-World AI Research",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2602.15112"
+        },
+        {
+          "title": "See, Hypothesize, Validate: Multimodal Agentic Framework for Discovering Governing PDEs",
+          "year": 2026,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2608.27869"
+        },
+        {
+          "title": "TRACEDD: A Tool-grounded Reasoning and Agentic Coordination for Explainable Drug Design",
+          "year": 2026,
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+          "status": "Preprint",
+          "url": "https://doi.org/10.64898/2026.09.12.751167"
+        },
+        {
+          "title": "Accelerating Manufacturing Scale-Up from Material Discovery Using Agentic Web Navigation and Retrieval-Augmented AI for Process Engineering Schematics Design",
+          "year": 2025,
+          "venue": "Qeios",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2412.05937"
+        },
+        {
+          "title": "Agent Ideate: A Framework for Product Idea Generation from Patents Using Agentic AI",
+          "year": 2025,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2507.01717"
+        },
+        {
+          "title": "AutoChemSchematic AI: Agentic Physics-Aware Automation for Chemical Manufacturing Scale-Up",
+          "year": 2025,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2505.24584"
+        },
+        {
+          "title": "Know Thyself: Validating Knowledge Awareness of LLM-based Persona Agents",
+          "year": 2025,
+          "venue": "Workshop on Trustworthy NLP (TrustNLP)",
+          "status": "Published",
+          "url": "https://doi.org/10.18653/v1/2025.trustnlp-main.22"
+        },
+        {
+          "title": "ResearchCodeAgent: An LLM Multi-agent System for Automated Codification of Research Methodologies",
+          "year": 2025,
+          "venue": "Communications in computer and information science",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2504.20117"
+        },
+        {
+          "title": "Taming Byzantine Adversaries in Decentralized Multi-Agent Reinforcement Learning",
+          "year": 2025,
+          "venue": "Indian Control Conference",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/icc69100.2025.11372359"
+        },
+        {
+          "title": "Agentic Retrieval-Augmented Generation for Time Series Analysis",
+          "year": 2024,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2408.14484"
+        },
+        {
+          "title": "BudgetMLAgent: A Cost-Effective LLM Multi-Agent system for Automating Machine Learning Tasks",
+          "year": 2024,
+          "venue": "International Conference on AI-ML Systems (AIMLSystems)",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2411.07464"
+        },
+        {
+          "title": "Correlated Equilibrium based Online Real-time Distributed Dynamic Task Scheduler for Multi-agent Systems",
+          "year": 2024,
+          "venue": "International Joint Conference on Neural Networks (IJCNN)",
+          "status": "Published",
+          "url": "https://doi.org/10.1109/ijcnn60899.2024.10650142"
+        },
+        {
+          "title": "TASCA++ : A multi-agentic tool to scalably accelerate ML pipelines",
+          "year": 2024,
+          "venue": "International Conference on AI-ML Systems (AIMLSystems)",
+          "status": "Published",
+          "url": "https://doi.org/10.1145/3703412.3703437"
+        },
+        {
+          "title": "Towards Automated Patent Workflows: AI-Orchestrated Multi-Agent Framework for Intellectual Property Management and Analysis",
+          "year": 2024,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2409.19006"
+        },
+        {
+          "title": "Towards Human-Level Understanding of Complex Process Engineering Schematics: A Pedagogical, Introspective Multi-Agent Framework for Open-Domain Question Answering",
+          "year": 2024,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2409.00082"
+        },
+        {
+          "title": "Multi-Agent Learning of Efficient Fulfilment and Routing Strategies in E-Commerce",
+          "year": 2023,
+          "venue": "arXiv (Cornell University)",
+          "status": "Preprint",
+          "url": "https://arxiv.org/abs/2311.16171"
+        },
+        {
+          "title": "Multi-armed Bandit Based Tariff Generation Strategy for Multi-agent Smart Grid Systems",
+          "year": 2023,
+          "venue": "Lecture notes in computer science",
+          "status": "Published",
+          "url": "https://doi.org/10.1007/978-3-031-48539-8_8"
+        },
+        {
+          "title": "tagE: Enabling an Embodied Agent to Understand Human Instructions",
+          "year": 2023,
+          "venue": "Findings of the Association for Computational Linguistics: EMNLP (Findings of EMNLP)",
+          "status": "Published",
+          "url": "https://arxiv.org/abs/2310.15605"
+        }
+      ]
+    }
+  ],
+  "gap": {
+    "groups": {
+      "unlearning": [
+        "Shirish Subhash Karande",
+        "Vivek Srivastava",
+        "Ashutosh Ranjan",
+        "Ashok Urlana",
+        "Manasi S. Patwardhan",
+        "Snigdha Paul"
+      ],
+      "edge": [
+        "Arpan Pal",
+        "S. Dey",
+        "Arijit Mukherjee",
+        "Arijit Ukil",
+        "Shalini Mukhopadhyay"
+      ]
+    },
+    "shared_papers": 0,
+    "path": [
+      "Manasi S. Patwardhan",
+      "Beena Rai",
+      "Anirban Chaudhuri",
+      "Arpan Pal"
+    ],
+    "path_hops": 3
+  },
+  "external_institutions": [
+    {
+      "institution": "Indian Institute of Technology Kharagpur",
+      "shared_papers": 52
+    },
+    {
+      "institution": "International Institute of Information Technology, Hyderabad",
+      "shared_papers": 26
+    },
+    {
+      "institution": "Indian Institute of Technology Bombay",
+      "shared_papers": 22
+    },
+    {
+      "institution": "Indian Institute of Science Bangalore",
+      "shared_papers": 19
+    },
+    {
+      "institution": "Indian Institute of Technology Delhi",
+      "shared_papers": 19
+    },
+    {
+      "institution": "Indian Institute of Technology Kanpur",
+      "shared_papers": 19
+    },
+    {
+      "institution": "Indian Institute of Technology Madras",
+      "shared_papers": 14
+    },
+    {
+      "institution": "Indian Institute of Technology Roorkee",
+      "shared_papers": 14
+    },
+    {
+      "institution": "Indraprastha Institute of Information Technology Delhi",
+      "shared_papers": 14
+    },
+    {
+      "institution": "National Institute of Technology Durgapur",
+      "shared_papers": 12
+    }
+  ],
+  "spot_checks": {
+    "checked": 40,
+    "confirmed": 33,
+    "contradicted": 0,
+    "unverifiable": 7
+  }
+}
