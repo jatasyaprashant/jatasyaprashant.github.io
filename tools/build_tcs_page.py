@@ -24,8 +24,8 @@ URL = "https://jatasyaprashant.github.io/tcs-research/"
 TITLE = "What TCS Research publishes: a 2023–2026 publication map"
 DESCRIPTION = ("An independent map of TCS Research papers, venues, research groups, "
                "and collaborations through 23 November 2026.")
-CSV_FIELDS = ("title", "year", "venue", "venue_tier", "domain", "status",
-              "authors", "tcs_authors", "doi", "arxiv_url")
+PAPER_FIELDS = ("title", "year", "date", "venue", "domain", "status", "authors",
+                "doi", "arxiv_url", "openalex_id", "landing_page")
 FOCUS = (
     ("Unlearning", "Papers classified as Unlearning and titles matching related terms such as forgetting, leakage and attribution.",
      "Unlearning", r"unlearn|forget|erasure|attribution|leakage|alignment faking|realign"),
@@ -296,14 +296,50 @@ def portfolio_sections(data):
                       f'<th>Works</th></tr></thead><tbody>{people}</tbody></table>')
 
 
+def catalog(all_works, clean):
+    def key(row):
+        return tuple(row[field] for field in ("openalex_id", "doi", "arxiv_url", "title", "year", "venue"))
+
+    clean_keys = {key(row) for row in clean}
+    result = []
+    for row in sorted(all_works, key=lambda r: (-r["year"], (r["title"] or "").casefold())):
+        url = row["arxiv_url"] or row["doi"] or row["landing_page"]
+        if url and (urlsplit(url).scheme not in {"http", "https"} or not urlsplit(url).hostname):
+            raise ValueError("Invalid publication URL")
+        result.append({field: row[field] for field in ("title", "year", "venue", "authors", "domain", "status")}
+                      | {"url": url, "clean": key(row) in clean_keys})
+    if sum(item["clean"] for item in result) != len(clean):
+        raise ValueError("Catalog membership disagrees with the clean workbook")
+    return result
+
+
+def render_catalog(records):
+    by_year = defaultdict(list)
+    for record in records:
+        title = h(record["title"] or "Title unavailable in source metadata")
+        link = f'<a href="{h(record["url"])}">{title}</a>' if record["url"] else title
+        year, status = record["year"], h(record["status"])
+        line = (f'<li data-clean="{int(record["clean"])}" data-status="{status}">{link}'
+                f'<span class="paper-meta">{h(record["authors"] or "Authors unspecified")}</span>'
+                f'<span class="meta paper-meta">{year} ? {h(record["venue"] or "Venue unspecified")} ? '
+                f'{h(record["domain"] or "Domain unspecified")} ? {status}</span></li>')
+        by_year[year].append(line)
+    return "\n".join(
+        f'<details data-catalog-year="{year}"{" open" if year == max(by_year) else ""}>'
+        f'<summary>{year} ? <span>{len(items):,} works</span></summary>'
+        f'<ol class="catalog-items">{"".join(items)}</ol></details>'
+        for year, items in sorted(by_year.items(), reverse=True)
+    )
+
+
 def analyze(dataset):
     papers = load_workbook(dataset / "tcs_papers_2023_2026.xlsx", read_only=True, data_only=True)
     authors = load_workbook(dataset / "tcs_authors_papers.xlsx", read_only=True, data_only=True)
     try:
-        all_works = rows(papers, "All", ("title", "year", "date", "status", "domain"))
+        all_works = rows(papers, "All", PAPER_FIELDS)
         all_years = Counter(row["year"] for row in all_works)
         author_works = rows(authors, "All_Papers", ("tracked_tcs_authors", "domain", "title", "year", "status", "doi", "arxiv_url"))
-        clean = rows(papers, "TCS_Research_Clean", (*CSV_FIELDS, "date"))
+        clean = rows(papers, "TCS_Research_Clean", PAPER_FIELDS)
         clean_years = Counter(row["year"] for row in clean)
         tiers = ranked(row["venue_tier"] for row in rows(papers, "Top_Tier", ("venue_tier",)))
         sources, benchmark, unconfirmed = source_stats(papers)
@@ -357,6 +393,7 @@ def analyze(dataset):
         "all_status": dict(Counter(row["status"] for row in all_works)),
         "broad_trends": domain_trends(all_works),
         "portfolio": portfolio(clean, directory, author_works),
+        "catalog": catalog(all_works, clean),
         "sources": sources,
         "openalex_benchmark": benchmark,
         "unconfirmed_candidates": unconfirmed,
@@ -372,7 +409,7 @@ def analyze(dataset):
             "contradicted": verdicts["contradicted"] + contradicted,
             "unverifiable": verdicts["unverifiable_by_checker"] + unverifiable,
         },
-    }, clean
+    }
 
 
 def h(value):
@@ -495,7 +532,7 @@ def render(data):
     return Template((ROOT / "tools" / "tcs_page.html").read_text(encoding="utf-8")).substitute(
         title=h(TITLE), description=h(DESCRIPTION), url=URL, json_ld=metadata,
         data_date=h(data["data_date"]), version=h(data["dataset_version"]),
-        problems=problems, people=people, cohorts=cohorts, breadth=h(breadth),
+        catalog=render_catalog(data["catalog"]), problems=problems, people=people, cohorts=cohorts, breadth=h(breadth),
         status_counts=h(", ".join(f"{number(n)} {label.lower()}" for label,n in data["all_status"].items())),
         summary=h(summary), all=number(data["all"]), clean=number(data["clean"]),
         top_tier=number(data["top_tier"]), tiers=h(tier_breakdown), authors=number(data["authors_tracked"]),
@@ -522,17 +559,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("dataset", type=Path, help="Directory containing the v1.1 dataset workbooks")
     args = parser.parse_args()
-    data, clean = analyze(args.dataset)
+    data = analyze(args.dataset)
     summary = ROOT / "tools" / "tcs_summary.json"
     summary.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     page = ROOT / "tcs-research"
     (page / "index.html").write_text(render(json.loads(summary.read_text(encoding="utf-8"))), encoding="utf-8")
-    export = page / "data" / "tcs_research_clean_2023_2026.csv"
-    export.parent.mkdir(parents=True, exist_ok=True)
-    with export.open("w", encoding="utf-8", newline="") as file:
-        writer = csv.DictWriter(file, fieldnames=CSV_FIELDS)
-        writer.writeheader()
-        writer.writerows({field: row[field] for field in CSV_FIELDS} for row in clean)
 
 
 if __name__ == "__main__":

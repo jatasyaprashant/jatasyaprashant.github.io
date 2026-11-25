@@ -135,3 +135,46 @@
   });
   byId('people-filter').hidden = false;
 })();
+
+(() => {
+  const controls = document.getElementById('catalog-filters');
+  const search = document.getElementById('catalog-search');
+  const scope = document.getElementById('catalog-scope');
+  const year = document.getElementById('catalog-year');
+  const status = document.getElementById('catalog-status');
+  const statuses = new Set();
+  const groups = Array.from(document.querySelectorAll('details[data-catalog-year]'), section => {
+    const label = section.dataset.catalogYear;
+    year.add(new Option(label, label));
+    const entries = Array.from(section.querySelectorAll('li'), item => {
+      statuses.add(item.dataset.status);
+      const text = Array.from(item.children, field => field.textContent).join(' ').toLowerCase();
+      return {item, text};
+    });
+    return {section, label, entries};
+  });
+  [...statuses].sort().forEach(label => status.add(new Option(label, label)));
+  function update() {
+    const query = search.value.trim().toLowerCase();
+    let total = 0;
+    for (const group of groups) {
+      let count = 0;
+      for (const {item, text} of group.entries) {
+        const visible = (!scope.value || item.dataset.clean === '1') &&
+          (!year.value || year.value === group.label) &&
+          (!status.value || item.dataset.status === status.value) && text.includes(query);
+        item.hidden = !visible;
+        if (visible) count++;
+      }
+      group.section.hidden = count === 0;
+      group.section.open = count > 0 && (Boolean(query || year.value || scope.value || status.value) || group === groups[0]);
+      group.section.querySelector('summary span').textContent = count.toLocaleString('en-US') + (count === 1 ? ' work' : ' works');
+      total += count;
+    }
+    document.getElementById('catalog-results').textContent = total.toLocaleString('en-US') + (total === 1 ? ' matching work.' : ' matching works.');
+  }
+  search.addEventListener('input', update);
+  controls.addEventListener('change', update);
+  controls.hidden = false;
+  update();
+})();

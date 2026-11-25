@@ -110,6 +110,10 @@ details table{margin-top:0}
 #inspection{font-variant-numeric:tabular-nums}
 [hidden]{display:none!important}
 .study-nav{display:flex;gap:8px 20px;flex-wrap:wrap;margin-top:18px;font-size:.95rem}
+.catalog-items{padding-inline-start:2.75rem}
+.catalog-items li{padding:10px 0;border-bottom:1px solid var(--rule);overflow-wrap:anywhere}
+.catalog-items li::marker{font-variant-numeric:tabular-nums;color:var(--muted)}
+.catalog-items .paper-meta{font-size:.875rem}
 </style>
 </head>
 <body>
@@ -131,7 +135,7 @@ details table{margin-top:0}
       <div><dt>Authors tracked</dt><dd>$authors</dd></div>
     </dl>
     <p class="meta tier-note">$tiers</p>
-    <nav aria-label="Explore the study" class="study-nav"><a href="#problems">Problems studied</a><a href="#research-trends">Compare trends</a><a href="#researchers">Find researchers</a><a href="#focus-papers">Browse papers</a></nav>
+    <nav aria-label="Explore the study" class="study-nav"><a href="#problems">Problems studied</a><a href="#research-trends">Compare trends</a><a href="#researchers">Find researchers</a><a href="#all-papers">All papers</a></nav>
   </header>
   <section>
     <h2 id="problems">What problems does TCS Research study?</h2>
@@ -237,10 +241,20 @@ details table{margin-top:0}
   <section aria-label="Disclaimer">
     <p>This is an independent study based on public metadata, without affiliation with or endorsement by TCS. <a id="corrections" href="/#contact">Corrections welcome</a>.</p>
   </section>
-  <footer>
-    <h2>Downloads</h2>
-    <p><a href="data/tcs_research_clean_2023_2026.csv" download>Download the clean publication dataset (CSV)</a> · $clean works</p>
-  </footer>
+  <section aria-labelledby="all-papers">
+    <h2 id="all-papers">All papers</h2>
+    <p>The full collection contains $all indexed works, including preprints and records with unverified affiliation. The screened TCS Research subset contains $clean works. Open a year to browse its entries.</p>
+    <div id="catalog-filters" class="panel" hidden>
+      <div class="filters">
+        <label>Search the collection<input type="search" id="catalog-search" placeholder="Title, author, venue or domain"></label>
+        <label>Collection<select id="catalog-scope"><option value="">Full collection</option><option value="clean">Screened TCS Research</option></select></label>
+        <label>Year<select id="catalog-year"><option value="">All years</option></select></label>
+        <label>Status<select id="catalog-status"><option value="">All statuses</option></select></label>
+      </div>
+      <p id="catalog-results" role="status"></p>
+    </div>
+    $catalog
+  </section>
 </main>
 <script>
 // Reuse the contact address already published on the homepage.
