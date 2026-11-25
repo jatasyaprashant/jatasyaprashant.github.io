@@ -131,11 +131,16 @@ details table{margin-top:0}
       <div><dt>Authors tracked</dt><dd>$authors</dd></div>
     </dl>
     <p class="meta tier-note">$tiers</p>
-    <nav aria-label="Explore the study" class="study-nav"><a href="#research-trends">Compare trends</a><a href="#researchers">Find researchers</a><a href="#focus-papers">Browse papers</a></nav>
+    <nav aria-label="Explore the study" class="study-nav"><a href="#problems">Problems studied</a><a href="#research-trends">Compare trends</a><a href="#researchers">Find researchers</a><a href="#focus-papers">Browse papers</a></nav>
   </header>
   <section>
+    <h2 id="problems">What problems does TCS Research study?</h2>
+    <p>These examples were selected from published records in the screened research collection. They describe the questions the papers investigate. The titles alone cannot establish deployment or business impact.</p>
+    $problems
+  </section>
+  <section>
     <h2>Output by year</h2>
-    <p>All covers the broader discovery collection, including works with unverified status. Clean is the screened TCS Research subset. The 2026 counts run through 23 November.</p>
+    <p>The full discovery collection contains $status_counts records. Clean is the screened TCS Research subset. The 2026 counts run through 23 November.</p>
     <div class="panel">
       $output
       <div class="benchmark"><span>OpenAlex institution benchmark · Full window</span><strong>$benchmark</strong></div>
@@ -158,6 +163,12 @@ details table{margin-top:0}
       <p id="inspection" aria-live="polite"></p>
     </div>
     $direction
+    <h3>Does the broader TCS collection show the same shift?</h3>
+    <p>$breadth</p>
+    <details><summary>Check the trend against the broader TCS collection</summary>
+      <p>Each cell gives the domain count, total eligible works and percentage. The first line covers the full TCS discovery collection and the second covers screened TCS Research. Both lines use published works with complete dates through 23 November of each year.</p>
+      $cohorts
+    </details>
     <h3 class="subsection">Domain distribution across the full window</h3>
     <p>Each clean work is counted under its dataset domain. Venue totals use the recorded venue names and include preprint repositories.</p>
     <div class="panel">$domains</div>
@@ -165,7 +176,10 @@ details table{margin-top:0}
     $venues
   </section>
   <section>
-    <h2 id="researchers">Research groups</h2>
+    <h2 id="researchers">Who publishes the most in the tracked directory?</h2>
+    <p>Researchers are ordered by the number of distinct works credited to them in the author export. The table shows the ten most prolific tracked researchers, including any ties at the cutoff. A coauthored paper can count for multiple people. Recorded cities and topics come from the directory.</p>
+    $people
+    <h3>Explore all tracked researchers</h3>
     <p>The author directory groups researchers by recorded TCS city. Main topics are each researcher’s three most frequent dataset domains. Paper counts come from the author export.</p>
     <label id="people-filter" hidden>Find a researcher<input type="search" id="people-search" placeholder="Name, city or topic"></label>
     <p id="people-results" class="meta" role="status"></p>
@@ -189,7 +203,7 @@ details table{margin-top:0}
     $focus
   </section>
   <section>
-    <h2>The gap</h2>
+    <h2>Coauthorship case study</h2>
     <dl class="groups">
       <div><dt>Unlearning comparison group</dt><dd>$unlearning</dd></div>
       <div><dt>Edge comparison group</dt><dd>$edge</dd></div>

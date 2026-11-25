@@ -157,7 +157,7 @@ def domain_trends(records):
             trends[str(year)][key] = {
                 "total": len(population),
                 "domains": dict(Counter(row["domain"] or "Unspecified" for row in population)),
-                "llm_titles": sum(bool(re.search(r"large language model|\bLLMs?\b", row["title"], re.I))
+                "llm_titles": sum(bool(re.search(r"large language model|\bLLMs?\b", row["title"] or "", re.I))
                                   for row in population),
             }
     return trends
@@ -237,11 +237,72 @@ def direction(data):
             + chart + "".join(sections))
 
 
+# Editorial examples of concrete tasks; publication details come from the clean workbook.
+PROBLEMS = [
+    ("How can clinicians interpret patient measurements?", "Predict disease progression from hospital data and estimate blood pressure from cuff pressure and sound.", ["10.1145/3708557.3716327", "10.1109/apscon63569.2025.11144129"]),
+    ("Can language models assist research reliably?", "Evaluate the design of ablation studies and test whether persona agents recognize the limits of their knowledge.", ["10.18653/v1/2025.acl-long.611", "10.18653/v1/2025.trustnlp-main.22"]),
+    ("Where should AI workloads run?", "Choose how to place workloads across edge and cloud systems and estimate inference latency on cloud accelerators.", ["10.1145/3676151.3719355", "10.1109/sci68648.2025.11333851"]),
+    ("How can researchers design materials and energy systems?", "Explore alloy compositions and processing routes with multi-agent learning, and optimize solid-state battery designs using physics and machine learning.", ["10.36922/ijamd025480050", "10.1149/ma2025-023490mtgabs"]),
+    ("How can operators detect changes or faults?", "Detect land-surface changes in optical and radar imagery and identify pipeline leaks from acoustic signals.", ["10.1109/igarss55030.2025.11243059", "10.1109/lsens.2025.3638602"]),
+    ("How can industrial and public infrastructure be operated more efficiently?", "Study sorting-terminal operations and simulate water-management strategies using a digital twin.", ["10.1007/978-3-031-89654-5_4", "10.1109/wsc68292.2025.11339117"]),
+    ("How can robots plan and execute physical tasks?", "Study motion planning and control of a drone carrying a suspended load.", ["10.1109/case58245.2025.11163733", "10.2514/6.2025-0144"]),
+    ("How can enterprises modernize software and protect data?", "Study decomposition into domain-aligned microservices and privacy-preserving cloud data sharing.", ["10.1145/3717383.3717396", "10.1109/comsnets63942.2025.10885766"]),
+    ("What can quantum methods contribute?", "Explore how to prepare molecular ground states on quantum computers and how enterprises could migrate devices to post-quantum cryptography.", ["10.1364/quantum.2025.qtu3a.8", "10.1007/978-3-032-13714-2_15"]),
+]
+
+
+def evidence(row):
+    return {"title": row["title"], "year": row["year"], "domain": row["domain"],
+            "url": paper_link(row)}
+
+
+def portfolio(clean, directory, author_works):
+    by_doi = {row["doi"].casefold(): row for row in clean if row["doi"]}
+    problems = [{"question": question, "explanation": text,
+                 "papers": [evidence(by_doi["https://doi.org/" + doi]) for doi in dois]}
+                for question, text, dois in PROBLEMS]
+    researchers = []
+    ordered = sorted(directory, key=lambda r: (-r["papers"], r["name"]))
+    cutoff = ordered[min(9, len(ordered)-1)]["papers"]
+    for person in ordered:
+        if person["papers"] < cutoff:
+            break
+        name = person["name"]
+        works = [r for r in author_works if name in (r["tracked_tcs_authors"] or "").split(", ")]
+        if len(works) != person["papers"]:
+            raise ValueError(f"Author total disagrees for {name}")
+        topics = (person["top_3_domains"] or "").split("; ")
+        published = [r for r in works if r["status"] == "Published" and (r["doi"] or r["arxiv_url"])]
+        example = min(published, key=lambda r: (r["domain"] != topics[0], -r["year"], r["title"]))
+        researchers.append({"name": name, "city": person["tcs_city"], "topics": topics,
+                            "count": len(works), "example": evidence(example)})
+    return {"problems": problems, "researchers": researchers}
+
+
+def evidence_link(work):
+    return f'<a href="{h(work["url"])}">{h(work["title"])}</a> ({work["year"]})'
+
+
+def portfolio_sections(data):
+    problems = "".join(
+        f'<article class="subsection"><h3>{h(item["question"])}</h3><p>{h(item["explanation"])}</p><ul>'
+        + "".join(f'<li>{evidence_link(work)}</li>' for work in item["papers"]) + "</ul></article>"
+        for item in data["portfolio"]["problems"])
+    people = "".join(
+        f'<tr><th scope="row">{h(p["name"])}<small class="paper-meta">{h(p["city"])}</small></th>'
+        f'<td>{h(", ".join(p["topics"]))}<small class="paper-meta">{evidence_link(p["example"])}</small></td>'
+        f'<td>{p["count"]}</td></tr>' for p in data["portfolio"]["researchers"])
+    return problems, ('<table><thead><tr><th>Researcher</th><th>Topics and example publication</th>'
+                      f'<th>Works</th></tr></thead><tbody>{people}</tbody></table>')
+
+
 def analyze(dataset):
     papers = load_workbook(dataset / "tcs_papers_2023_2026.xlsx", read_only=True, data_only=True)
     authors = load_workbook(dataset / "tcs_authors_papers.xlsx", read_only=True, data_only=True)
     try:
-        all_years = Counter(row["year"] for row in rows(papers, "All", ("year",)))
+        all_works = rows(papers, "All", ("title", "year", "date", "status", "domain"))
+        all_years = Counter(row["year"] for row in all_works)
+        author_works = rows(authors, "All_Papers", ("tracked_tcs_authors", "domain", "title", "year", "status", "doi", "arxiv_url"))
         clean = rows(papers, "TCS_Research_Clean", (*CSV_FIELDS, "date"))
         clean_years = Counter(row["year"] for row in clean)
         tiers = ranked(row["venue_tier"] for row in rows(papers, "Top_Tier", ("venue_tier",)))
@@ -293,6 +354,9 @@ def analyze(dataset):
         "years": [{"year": year, "all": all_years[year], "clean": clean_years[year]}
                   for year in sorted(all_years | clean_years)],
         "trends": domain_trends(clean),
+        "all_status": dict(Counter(row["status"] for row in all_works)),
+        "broad_trends": domain_trends(all_works),
+        "portfolio": portfolio(clean, directory, author_works),
         "sources": sources,
         "openalex_benchmark": benchmark,
         "unconfirmed_candidates": unconfirmed,
@@ -389,15 +453,39 @@ def render(data):
     path_hops = gap["path_hops"]
     path_length = (f"{path_hops} coauthor {'link' if path_hops == 1 else 'links'}"
                    if path_hops is not None else "no connecting path")
-    gap_sentence = f"The two comparison groups share {number(gap['shared_papers'])} papers in the author export"
-    if path_hops is not None:
-        gap_sentence += f" and their shortest path spans {path_length}"
+    problems, people = portfolio_sections(data)
     summary = (
-        f"The dataset contains {number(data['all'])} unique works, including {number(data['clean'])} "
-        f"in the clean TCS Research subset. The tiered shortlist has {number(data['top_tier'])} works "
-        f"and the author export tracks {number(data['authors_tracked'])} researchers. "
-        f"{largest[0]} and {largest[1]} are the largest named domains in the clean subset. {gap_sentence}."
+        f"Across {number(data['clean'])} screened TCS Research works, {largest[0]} and {largest[1]} "
+        "are the largest named domains. Language-model research gained share across the period, "
+        "while the recent rise in agent papers spans both language agents and multi-agent control. "
+        "Researchers also address clinical measurement, materials design, industrial operations and computing infrastructure. "
+        "The evidence below connects each interpretation to paper counts, named researchers and published examples."
     )
+    broad = data["broad_trends"]
+    matched_years = sorted(broad)
+    def cohort_reading(year, domain):
+        population = broad[year]["published"]
+        n = population["domains"].get(domain, 0)
+        return f"{n} of {population['total']} ({percent(n, population['total'])})"
+    first, last = matched_years[0], matched_years[-1]
+    breadth = (f"In the broader TCS collection, NLP/LLM increased from {cohort_reading(first, 'NLP/LLM')} "
+               f"in {first} to {cohort_reading(last, 'NLP/LLM')} in {last}. Agents went from "
+               f"{cohort_reading(first, 'Agents')} to {cohort_reading(last, 'Agents')}. "
+               "These comparisons use only published works with a complete date through 23 November in each year.")
+    cohort_rows = []
+    for domain, _ in data["domains"]:
+        cells = []
+        for year in sorted(broad):
+            values = []
+            for series in (broad, data["trends"]):
+                population = series[year]["published"]
+                count = population["domains"].get(domain, 0)
+                values.append(f'{count}/{population["total"]} ({percent(count, population["total"])})')
+            cells.append(f'<td>{values[0]}<small class="paper-meta">{values[1]}</small></td>')
+        cohort_rows.append(f'<tr><th scope="row">{h(domain)}</th>{"".join(cells)}</tr>')
+    cohorts = ('<table class="trends"><thead><tr><th>Domain</th>'
+               + "".join(f"<th>{year}</th>" for year in sorted(broad))
+               + "</tr></thead><tbody>" + "".join(cohort_rows) + "</tbody></table>")
     metadata = json.dumps({
         "@context": "https://schema.org", "@type": "ScholarlyArticle", "headline": TITLE,
         "description": DESCRIPTION, "url": URL, "inLanguage": "en",
@@ -407,6 +495,8 @@ def render(data):
     return Template((ROOT / "tools" / "tcs_page.html").read_text(encoding="utf-8")).substitute(
         title=h(TITLE), description=h(DESCRIPTION), url=URL, json_ld=metadata,
         data_date=h(data["data_date"]), version=h(data["dataset_version"]),
+        problems=problems, people=people, cohorts=cohorts, breadth=h(breadth),
+        status_counts=h(", ".join(f"{number(n)} {label.lower()}" for label,n in data["all_status"].items())),
         summary=h(summary), all=number(data["all"]), clean=number(data["clean"]),
         top_tier=number(data["top_tier"]), tiers=h(tier_breakdown), authors=number(data["authors_tracked"]),
         explorer_script=(ROOT / "tools" / "tcs_explorer.js").read_text(encoding="utf-8-sig"),

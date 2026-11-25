@@ -286,6 +286,584 @@
       }
     }
   },
+  "all_status": {
+    "Published": 2354,
+    "Preprint": 281,
+    "Unverified": 83
+  },
+  "broad_trends": {
+    "2023": {
+      "incomplete_dates": 17,
+      "annual": {
+        "total": 674,
+        "domains": {
+          "Agents": 5,
+          "CV/VLM": 84,
+          "Chem/Materials/Energy": 63,
+          "Edge/Systems": 91,
+          "Health/Bio": 88,
+          "NLP/LLM": 43,
+          "OR/Finance": 35,
+          "Other": 124,
+          "Quantum": 18,
+          "Robotics": 34,
+          "SE/Formal": 23,
+          "Security/Privacy": 40,
+          "Speech": 26
+        },
+        "llm_titles": 6
+      },
+      "matched": {
+        "total": 567,
+        "domains": {
+          "Agents": 4,
+          "CV/VLM": 70,
+          "Chem/Materials/Energy": 55,
+          "Edge/Systems": 78,
+          "Health/Bio": 71,
+          "NLP/LLM": 37,
+          "OR/Finance": 27,
+          "Other": 105,
+          "Quantum": 16,
+          "Robotics": 26,
+          "SE/Formal": 21,
+          "Security/Privacy": 34,
+          "Speech": 23
+        },
+        "llm_titles": 4
+      },
+      "published": {
+        "total": 508,
+        "domains": {
+          "Agents": 3,
+          "CV/VLM": 65,
+          "Chem/Materials/Energy": 46,
+          "Edge/Systems": 75,
+          "Health/Bio": 67,
+          "NLP/LLM": 33,
+          "OR/Finance": 22,
+          "Other": 91,
+          "Quantum": 11,
+          "Robotics": 25,
+          "SE/Formal": 19,
+          "Security/Privacy": 31,
+          "Speech": 20
+        },
+        "llm_titles": 3
+      }
+    },
+    "2024": {
+      "incomplete_dates": 3,
+      "annual": {
+        "total": 689,
+        "domains": {
+          "Agents": 12,
+          "CV/VLM": 83,
+          "Chem/Materials/Energy": 51,
+          "Edge/Systems": 74,
+          "Health/Bio": 73,
+          "NLP/LLM": 63,
+          "OR/Finance": 54,
+          "Other": 129,
+          "Quantum": 16,
+          "Robotics": 36,
+          "SE/Formal": 24,
+          "Security/Privacy": 50,
+          "Speech": 24
+        },
+        "llm_titles": 29
+      },
+      "matched": {
+        "total": 589,
+        "domains": {
+          "Agents": 11,
+          "CV/VLM": 64,
+          "Chem/Materials/Energy": 49,
+          "Edge/Systems": 57,
+          "Health/Bio": 63,
+          "NLP/LLM": 56,
+          "OR/Finance": 46,
+          "Other": 110,
+          "Quantum": 15,
+          "Robotics": 34,
+          "SE/Formal": 21,
+          "Security/Privacy": 43,
+          "Speech": 20
+        },
+        "llm_titles": 24
+      },
+      "published": {
+        "total": 505,
+        "domains": {
+          "Agents": 6,
+          "CV/VLM": 56,
+          "Chem/Materials/Energy": 38,
+          "Edge/Systems": 55,
+          "Health/Bio": 57,
+          "NLP/LLM": 42,
+          "OR/Finance": 42,
+          "Other": 90,
+          "Quantum": 13,
+          "Robotics": 34,
+          "SE/Formal": 20,
+          "Security/Privacy": 37,
+          "Speech": 15
+        },
+        "llm_titles": 12
+      }
+    },
+    "2025": {
+      "incomplete_dates": 4,
+      "annual": {
+        "total": 731,
+        "domains": {
+          "Agents": 16,
+          "CV/VLM": 86,
+          "Chem/Materials/Energy": 44,
+          "Edge/Systems": 78,
+          "Health/Bio": 81,
+          "NLP/LLM": 77,
+          "OR/Finance": 58,
+          "Other": 136,
+          "Quantum": 25,
+          "Robotics": 28,
+          "SE/Formal": 24,
+          "Security/Privacy": 52,
+          "Speech": 26
+        },
+        "llm_titles": 40
+      },
+      "matched": {
+        "total": 653,
+        "domains": {
+          "Agents": 14,
+          "CV/VLM": 75,
+          "Chem/Materials/Energy": 38,
+          "Edge/Systems": 68,
+          "Health/Bio": 76,
+          "NLP/LLM": 67,
+          "OR/Finance": 51,
+          "Other": 128,
+          "Quantum": 22,
+          "Robotics": 23,
+          "SE/Formal": 24,
+          "Security/Privacy": 45,
+          "Speech": 22
+        },
+        "llm_titles": 34
+      },
+      "published": {
+        "total": 586,
+        "domains": {
+          "Agents": 5,
+          "CV/VLM": 71,
+          "Chem/Materials/Energy": 34,
+          "Edge/Systems": 64,
+          "Health/Bio": 66,
+          "NLP/LLM": 58,
+          "OR/Finance": 45,
+          "Other": 119,
+          "Quantum": 20,
+          "Robotics": 23,
+          "SE/Formal": 22,
+          "Security/Privacy": 40,
+          "Speech": 19
+        },
+        "llm_titles": 30
+      }
+    },
+    "2026": {
+      "incomplete_dates": 1,
+      "annual": {
+        "total": 624,
+        "domains": {
+          "Agents": 30,
+          "CV/VLM": 75,
+          "Chem/Materials/Energy": 54,
+          "Edge/Systems": 58,
+          "Health/Bio": 60,
+          "NLP/LLM": 70,
+          "OR/Finance": 48,
+          "Other": 90,
+          "Quantum": 24,
+          "Robotics": 22,
+          "SE/Formal": 25,
+          "Security/Privacy": 50,
+          "Speech": 13,
+          "Unlearning": 5
+        },
+        "llm_titles": 35
+      },
+      "matched": {
+        "total": 623,
+        "domains": {
+          "Agents": 30,
+          "CV/VLM": 74,
+          "Chem/Materials/Energy": 54,
+          "Edge/Systems": 58,
+          "Health/Bio": 60,
+          "NLP/LLM": 70,
+          "OR/Finance": 48,
+          "Other": 90,
+          "Quantum": 24,
+          "Robotics": 22,
+          "SE/Formal": 25,
+          "Security/Privacy": 50,
+          "Speech": 13,
+          "Unlearning": 5
+        },
+        "llm_titles": 35
+      },
+      "published": {
+        "total": 503,
+        "domains": {
+          "Agents": 19,
+          "CV/VLM": 66,
+          "Chem/Materials/Energy": 50,
+          "Edge/Systems": 47,
+          "Health/Bio": 51,
+          "NLP/LLM": 51,
+          "OR/Finance": 38,
+          "Other": 69,
+          "Quantum": 15,
+          "Robotics": 17,
+          "SE/Formal": 21,
+          "Security/Privacy": 47,
+          "Speech": 10,
+          "Unlearning": 2
+        },
+        "llm_titles": 21
+      }
+    }
+  },
+  "portfolio": {
+    "problems": [
+      {
+        "question": "How can clinicians interpret patient measurements?",
+        "explanation": "Predict disease progression from hospital data and estimate blood pressure from cuff pressure and sound.",
+        "papers": [
+          {
+            "title": "A Data-Driven Approach to Predicting and Visualizing Disease Progression in Hospitalized Patients",
+            "year": 2025,
+            "domain": "CV/VLM",
+            "url": "https://arxiv.org/abs/2407.21039"
+          },
+          {
+            "title": "Accurate Blood Pressure Prediction using Korotkoff Sound and Cuff Pressure: A Pilot Study",
+            "year": 2025,
+            "domain": "Health/Bio",
+            "url": "https://doi.org/10.1109/apscon63569.2025.11144129"
+          }
+        ]
+      },
+      {
+        "question": "Can language models assist research reliably?",
+        "explanation": "Evaluate the design of ablation studies and test whether persona agents recognize the limits of their knowledge.",
+        "papers": [
+          {
+            "title": "AbGen: Evaluating Large Language Models in Ablation Study Design and Evaluation for Scientific Research",
+            "year": 2025,
+            "domain": "NLP/LLM",
+            "url": "https://arxiv.org/abs/2507.13300"
+          },
+          {
+            "title": "Know Thyself: Validating Knowledge Awareness of LLM-based Persona Agents",
+            "year": 2025,
+            "domain": "Agents",
+            "url": "https://doi.org/10.18653/v1/2025.trustnlp-main.22"
+          }
+        ]
+      },
+      {
+        "question": "Where should AI workloads run?",
+        "explanation": "Choose how to place workloads across edge and cloud systems and estimate inference latency on cloud accelerators.",
+        "papers": [
+          {
+            "title": "CADAEC: Content-Aware Deployment of AI Workloads in Edge-Cloud Ecosystem",
+            "year": 2025,
+            "domain": "Edge/Systems",
+            "url": "https://doi.org/10.1145/3676151.3719355"
+          },
+          {
+            "title": "A Comparative Study of ML Models for Predicting LLM Inference Latency on Cloud Accelerators",
+            "year": 2025,
+            "domain": "NLP/LLM",
+            "url": "https://doi.org/10.1109/sci68648.2025.11333851"
+          }
+        ]
+      },
+      {
+        "question": "How can researchers design materials and energy systems?",
+        "explanation": "Explore alloy compositions and processing routes with multi-agent learning, and optimize solid-state battery designs using physics and machine learning.",
+        "papers": [
+          {
+            "title": "A multi-agent deep reinforcement learning framework for the generative design of alloys and processing routes",
+            "year": 2026,
+            "domain": "Agents",
+            "url": "https://doi.org/10.36922/ijamd025480050"
+          },
+          {
+            "title": "A Hybrid Physics Based-ML Model for Optimization of Solid-State Battery Design",
+            "year": 2025,
+            "domain": "Chem/Materials/Energy",
+            "url": "https://doi.org/10.1149/ma2025-023490mtgabs"
+          }
+        ]
+      },
+      {
+        "question": "How can operators detect changes or faults?",
+        "explanation": "Detect land-surface changes in optical and radar imagery and identify pipeline leaks from acoustic signals.",
+        "papers": [
+          {
+            "title": "A Deep Learning Framework using Remote-Sensing Foundation Model with Siamese U-Net and KAN-Based CNN for Optical and SAR Change Detection",
+            "year": 2025,
+            "domain": "CV/VLM",
+            "url": "https://doi.org/10.1109/igarss55030.2025.11243059"
+          },
+          {
+            "title": "A Data-Driven Approach to Leak Identification and Severity Analysis in Pipelines Using Acoustic Sensing and Deep Learning",
+            "year": 2025,
+            "domain": "Speech",
+            "url": "https://doi.org/10.1109/lsens.2025.3638602"
+          }
+        ]
+      },
+      {
+        "question": "How can industrial and public infrastructure be operated more efficiently?",
+        "explanation": "Study sorting-terminal operations and simulate water-management strategies using a digital twin.",
+        "papers": [
+          {
+            "title": "Improving Operational Efficiency of Sorting Terminals in Logistics Industry",
+            "year": 2025,
+            "domain": "OR/Finance",
+            "url": "https://doi.org/10.1007/978-3-031-89654-5_4"
+          },
+          {
+            "title": "A Digital Twin of Water Network for Exploring Sustainable Water Management Strategies",
+            "year": 2025,
+            "domain": "Other",
+            "url": "https://doi.org/10.1109/wsc68292.2025.11339117"
+          }
+        ]
+      },
+      {
+        "question": "How can robots plan and execute physical tasks?",
+        "explanation": "Study motion planning and control of a drone carrying a suspended load.",
+        "papers": [
+          {
+            "title": "GPD: Guided Polynomial Diffusion for Motion Planning",
+            "year": 2025,
+            "domain": "Robotics",
+            "url": "https://arxiv.org/abs/2501.18229"
+          },
+          {
+            "title": "Data Driven Model Predictive Control of a UAV Carrying a Cable Suspended Load",
+            "year": 2025,
+            "domain": "Robotics",
+            "url": "https://doi.org/10.2514/6.2025-0144"
+          }
+        ]
+      },
+      {
+        "question": "How can enterprises modernize software and protect data?",
+        "explanation": "Study decomposition into domain-aligned microservices and privacy-preserving cloud data sharing.",
+        "papers": [
+          {
+            "title": "Domain Aligned Microservices Decomposition",
+            "year": 2025,
+            "domain": "SE/Formal",
+            "url": "https://doi.org/10.1145/3717383.3717396"
+          },
+          {
+            "title": "Efficient privacy enabled data sharing in cloud using a novel Homomorphic Proxy Re-Encryption Scheme",
+            "year": 2025,
+            "domain": "Security/Privacy",
+            "url": "https://doi.org/10.1109/comsnets63942.2025.10885766"
+          }
+        ]
+      },
+      {
+        "question": "What can quantum methods contribute?",
+        "explanation": "Explore how to prepare molecular ground states on quantum computers and how enterprises could migrate devices to post-quantum cryptography.",
+        "papers": [
+          {
+            "title": "Efficient Preparation of Molecular Ground States on Quantum Computers with Givens Rotations",
+            "year": 2025,
+            "domain": "Quantum",
+            "url": "https://doi.org/10.1364/quantum.2025.qtu3a.8"
+          },
+          {
+            "title": "DoPQM: Devices Oriented Post-quantum Cryptographic Migration Strategies for an Enterprise Network",
+            "year": 2025,
+            "domain": "Quantum",
+            "url": "https://doi.org/10.1007/978-3-032-13714-2_15"
+          }
+        ]
+      }
+    ],
+    "researchers": [
+      {
+        "name": "Arpan Pal",
+        "city": "Kolkata",
+        "topics": [
+          "CV/VLM",
+          "Health/Bio",
+          "Edge/Systems"
+        ],
+        "count": 112,
+        "example": {
+          "title": "Designing a hyperspectral ultra-lightweight electro-optical telescopic system for longwave infrared domain Earth-observations",
+          "year": 2026,
+          "domain": "CV/VLM",
+          "url": "https://doi.org/10.1117/12.3119005"
+        }
+      },
+      {
+        "name": "Beena Rai",
+        "city": "Pune",
+        "topics": [
+          "Chem/Materials/Energy",
+          "Other",
+          "CV/VLM"
+        ],
+        "count": 72,
+        "example": {
+          "title": "Combined concurrent physical and chemical model for accelerated weathering damages of polyurethane-based coatings",
+          "year": 2026,
+          "domain": "Chem/Materials/Energy",
+          "url": "https://arxiv.org/abs/2410.19797"
+        }
+      },
+      {
+        "name": "Venkataramana Runkana",
+        "city": "Pune",
+        "topics": [
+          "Chem/Materials/Energy",
+          "CV/VLM",
+          "NLP/LLM"
+        ],
+        "count": 68,
+        "example": {
+          "title": "How does swirling electrovortex flow create mixing in a stably stratified liquid metal electrode?",
+          "year": 2026,
+          "domain": "Chem/Materials/Energy",
+          "url": "https://doi.org/10.1615/ihmtc-2025.2340"
+        }
+      },
+      {
+        "name": "Tapas Chakravarty",
+        "city": "Kolkata",
+        "topics": [
+          "CV/VLM",
+          "Health/Bio",
+          "Edge/Systems"
+        ],
+        "count": 57,
+        "example": {
+          "title": "Fractal Inspired Novel Reconfigurable Intelligent Surface Design at 3.5 GHz with Orthogonal Beam-Tilt Performance",
+          "year": 2026,
+          "domain": "CV/VLM",
+          "url": "https://doi.org/10.1007/s40031-026-01350-4"
+        }
+      },
+      {
+        "name": "Manjira Sinha",
+        "city": "Kolkata",
+        "topics": [
+          "CV/VLM",
+          "NLP/LLM",
+          "Other"
+        ],
+        "count": 54,
+        "example": {
+          "title": "Efficient Isolated Sign Language Recognition via MediaPipe Landmarks and Affinity Mixed Attention: A Case Study On American Sign Language",
+          "year": 2026,
+          "domain": "CV/VLM",
+          "url": "https://doi.org/10.1109/fg67764.2026.11556925"
+        }
+      },
+      {
+        "name": "Lovekesh Vig",
+        "city": "New Delhi",
+        "topics": [
+          "NLP/LLM",
+          "Other",
+          "CV/VLM"
+        ],
+        "count": 47,
+        "example": {
+          "title": "Fashion Attribute Extraction Under an Evolving Ontology",
+          "year": 2025,
+          "domain": "NLP/LLM",
+          "url": "https://doi.org/10.1007/978-3-031-91569-7_19"
+        }
+      },
+      {
+        "name": "Rekha Singhal",
+        "city": "Mumbai",
+        "topics": [
+          "Edge/Systems",
+          "Other",
+          "NLP/LLM"
+        ],
+        "count": 47,
+        "example": {
+          "title": "CADAEC: Content-Aware Deployment of AI Workloads in Edge-Cloud Ecosystem",
+          "year": 2025,
+          "domain": "Edge/Systems",
+          "url": "https://doi.org/10.1145/3676151.3719355"
+        }
+      },
+      {
+        "name": "Tirthankar Dasgupta",
+        "city": "Kolkata",
+        "topics": [
+          "NLP/LLM",
+          "CV/VLM",
+          "Other"
+        ],
+        "count": 46,
+        "example": {
+          "title": "Low-Resource Language Processing for Assistive Communication: AI Driven Bi Directional Bengali - AAC Symbol Translation for Users with CCN",
+          "year": 2026,
+          "domain": "NLP/LLM",
+          "url": "https://doi.org/10.1109/icalt68022.2026.00083"
+        }
+      },
+      {
+        "name": "Avik Ghose",
+        "city": "Kolkata",
+        "topics": [
+          "Health/Bio",
+          "CV/VLM",
+          "Edge/Systems"
+        ],
+        "count": 45,
+        "example": {
+          "title": "Estimation and Localization of Chronic Pain level from EEG Signals",
+          "year": 2026,
+          "domain": "Health/Bio",
+          "url": "https://doi.org/10.1145/3812836.3814769"
+        }
+      },
+      {
+        "name": "Manasi S. Patwardhan",
+        "city": "Pune",
+        "topics": [
+          "Other",
+          "NLP/LLM",
+          "SE/Formal"
+        ],
+        "count": 44,
+        "example": {
+          "title": "Can AI Be a Good Peer Reviewer? A Survey of Peer Review Process, Evaluation, and the Future",
+          "year": 2026,
+          "domain": "Other",
+          "url": "https://arxiv.org/abs/2604.27924"
+        }
+      }
+    ]
+  },
   "sources": [
     [
       "OpenAlex institution",
