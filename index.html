@@ -38,6 +38,7 @@
 
 <style>
 :root{
+  color-scheme:light;
   --bg:#eef2f1;
   --paper:#f8faf9;
   --ink:#14232b;
@@ -50,17 +51,6 @@
   --serif:"Literata", Georgia, serif;
   --sans:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#0e1a20; --paper:#13222a; --ink:#e3ebed; --muted:#93a6ad; --rule:#24363f;
-    --signal:#8db9ec; --signal-soft:#1b3346; --wave:#5fb3c4; --focus:#f2a15c;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0e1a20; --paper:#13222a; --ink:#e3ebed; --muted:#93a6ad; --rule:#24363f;
-  --signal:#8db9ec; --signal-soft:#1b3346; --wave:#5fb3c4; --focus:#f2a15c;
-}
-
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
@@ -94,8 +84,6 @@ a:hover{text-decoration-thickness:2px}
 .topbar nav{display:flex;gap:4px;align-items:center;background:var(--paper);border:1px solid var(--rule);border-radius:999px;padding:4px}
 .topbar nav a{font-size:14px;color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:999px}
 .topbar nav a:hover{color:var(--ink);background:var(--bg)}
-#theme{border:0;background:none;color:var(--muted);cursor:pointer;width:32px;height:32px;border-radius:50%;display:grid;place-items:center}
-#theme:hover{background:var(--bg);color:var(--ink)}
 @media (max-width:760px){.topbar nav a{display:none}}
 
 /* ---------- Body layout ---------- */
@@ -183,7 +171,7 @@ footer{border-top:1px solid var(--rule);padding:28px 24px 44px;font-size:14px;co
 }
 
 @media print{
-  .hero canvas,.topbar,.btns,.hero-caption,#theme{display:none}
+  .hero canvas,.topbar,.btns,.hero-caption{display:none}
   .hero-inner{padding:0 0 16px}
   body{background:#fff;color:#000}
   .layout{grid-template-columns:1fr}
@@ -208,9 +196,6 @@ footer{border-top:1px solid var(--rule);padding:28px 24px 44px;font-size:14px;co
         <a href="#projects">Projects</a>
         <a href="#cv">CV</a>
         <a href="#contact">Contact</a>
-        <button id="theme" type="button" aria-label="Switch light or dark theme">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg>
-        </button>
       </nav>
     </div>
   </div>
@@ -373,20 +358,6 @@ footer{border-top:1px solid var(--rule);padding:28px 24px 44px;font-size:14px;co
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
 
-/* Theme toggle */
-(function(){
-  var root = document.documentElement;
-  try { var t = localStorage.getItem('theme'); if (t) root.setAttribute('data-theme', t); } catch(e){}
-  document.getElementById('theme').addEventListener('click', function(){
-    var cur = root.getAttribute('data-theme');
-    var dark = cur ? cur === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
-    var next = dark ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    try { localStorage.setItem('theme', next); } catch(e){}
-    window.dispatchEvent(new Event('themechange'));
-  });
-})();
-
 /* Signal field: WiFi subcarrier amplitudes, perturbed by presence */
 (function(){
   var c = document.getElementById('field');
@@ -467,8 +438,6 @@ document.getElementById('yr').textContent = new Date().getFullYear();
     }
   }
   window.addEventListener('resize', function(){ size(); if (reduce) draw(0); });
-  window.addEventListener('themechange', function(){ readColor(); if (reduce) draw(0); });
-  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(){ readColor(); if (reduce) draw(0); });
 })();
 </script>
 </body>

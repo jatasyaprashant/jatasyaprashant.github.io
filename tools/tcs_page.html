@@ -15,14 +15,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
-<script>
-try {
-  const theme = localStorage.getItem('theme');
-  if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
-} catch {}
-</script>
 <style>
 :root{
+  color-scheme:light;
   --bg:#eef2f1;
   --paper:#f8faf9;
   --ink:#14232b;
@@ -35,16 +30,6 @@ try {
   --serif:"Literata", Georgia, serif;
   --sans:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#0e1a20; --paper:#13222a; --ink:#e3ebed; --muted:#93a6ad; --rule:#24363f;
-    --signal:#8db9ec; --signal-soft:#1b3346; --wave:#5fb3c4; --focus:#f2a15c;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0e1a20; --paper:#13222a; --ink:#e3ebed; --muted:#93a6ad; --rule:#24363f;
-  --signal:#8db9ec; --signal-soft:#1b3346; --wave:#5fb3c4; --focus:#f2a15c;
-}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 var(--sans);overflow-wrap:anywhere}
 a{color:var(--signal);text-underline-offset:.2em}
@@ -53,9 +38,6 @@ a{color:var(--signal);text-underline-offset:.2em}
 .wrap{width:min(760px, calc(100% - 40px));margin-inline:auto}
 .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:13px}
 .mark{font:600 1.05rem var(--serif);color:var(--ink);text-decoration:none}
-#theme{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--rule);border-radius:50%;background:var(--paper);color:var(--ink);cursor:pointer}
-#theme:hover{background:var(--bg)}
-#theme svg{width:20px;height:20px}
 .hero{padding:clamp(36px,7vw,76px) 0 28px}
 h1,h2,h3{font-family:var(--serif);line-height:1.2}
 h1{font-size:clamp(2.15rem,6vw,3.85rem);letter-spacing:-.034em;max-width:19ch;margin:0 0 22px}
@@ -133,9 +115,6 @@ details table{margin-top:0}
 <header class="topbar">
   <div class="wrap">
     <a class="mark" href="/">Prashant Badiger</a>
-    <button id="theme" type="button" aria-label="Switch light or dark theme">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.9 13.4a9 9 0 1 1-10.3-10.3 7.3 7.3 0 0 0 10.3 10.3Z"/></svg>
-    </button>
   </div>
 </header>
 <main class="wrap">
@@ -249,14 +228,6 @@ details table{margin-top:0}
   </footer>
 </main>
 <script>
-document.getElementById('theme').addEventListener('click', () => {
-  const root = document.documentElement;
-  const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
-  const theme = dark ? 'light' : 'dark';
-  root.dataset.theme = theme;
-  try { localStorage.setItem('theme', theme); } catch {}
-});
-
 // Reuse the contact address already published on the homepage.
 fetch('/')
   .then(response => response.ok ? response.text() : '')
