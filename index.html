@@ -20,7 +20,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -39,18 +39,19 @@
 <style>
 :root{
   color-scheme:light;
-  --bg:#eef2f1;
-  --paper:#f8faf9;
-  --ink:#14232b;
-  --muted:#56676f;
-  --rule:#d3dcdc;
-  --signal:#1c4f8c;
-  --signal-soft:#dbe6f2;
-  --wave:#2b7a8c;
-  --focus:#c2570c;
+  --bg:#faf8f2;
+  --paper:#fffdf8;
+  --ink:#332d34;
+  --muted:#625c58;
+  --rule:#dcd4c5;
+  --signal:#65425b;
+  --signal-soft:#f0e7ec;
+  --wave:#977538;
+  --focus:#845917;
   --serif:"Literata", Georgia, serif;
   --sans:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
@@ -61,37 +62,31 @@ a:hover{text-decoration-thickness:2px}
 .skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:6px;z-index:50}
 .skip:focus{left:12px}
 
-/* ---------- Hero: the signal field ---------- */
-.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--rule);background:var(--paper)}
-#field{position:absolute;inset:0;width:100%;height:100%;display:block}
-.hero-inner{position:relative;max-width:1080px;margin:0 auto;padding:120px 24px 64px;pointer-events:none}
-.hero-inner a,.hero-inner button{pointer-events:auto}
-.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(44px,8.5vw,96px);line-height:.98;letter-spacing:-.025em;margin:0 0 22px;max-width:9ch}
-.hero .lede{font-family:var(--serif);font-size:clamp(19px,2.3vw,23px);line-height:1.45;max-width:34ch;margin:0 0 30px}
-.hero .lede span{background:var(--paper);box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 4px}
-.hero-caption{position:relative;max-width:1080px;margin:0 auto;padding:0 24px 18px;font-size:13px;color:var(--muted);pointer-events:none}
-.hero-caption span{background:var(--paper);padding:2px 4px}
-
-.btns{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-block;font:500 15px/1 var(--sans);padding:12px 18px;border-radius:8px;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);background:var(--paper)}
-.btn.primary{background:var(--ink);color:var(--paper)}
-.btn:hover{background:var(--signal);border-color:var(--signal);color:var(--paper)}
-
-/* ---------- Top bar ---------- */
-.topbar{position:absolute;top:0;left:0;right:0;z-index:5}
-.topbar-inner{max-width:1080px;margin:0 auto;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
-.mark{font-family:var(--serif);font-weight:600;font-size:17px;color:var(--ink);text-decoration:none;background:var(--paper);padding:2px 6px;border-radius:4px}
-.topbar nav{display:flex;gap:4px;align-items:center;background:var(--paper);border:1px solid var(--rule);border-radius:999px;padding:4px}
-.topbar nav a{font-size:14px;color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:999px}
-.topbar nav a:hover{color:var(--ink);background:var(--bg)}
-@media (max-width:760px){.topbar nav a{display:none}}
+/* Masthead and navigation */
+.hero{background:var(--paper);border-top:3px solid var(--wave);border-bottom:1px solid var(--rule)}
+.topbar{border-bottom:1px solid var(--rule)}
+.topbar-inner{max-width:1080px;margin:auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px 32px;flex-wrap:wrap}
+.mark{font:600 18px var(--serif);color:var(--ink);text-decoration:none}
+.topbar nav{display:flex;align-items:center;gap:6px 20px;flex-wrap:wrap}
+.topbar nav a{font-size:14px;color:var(--muted);text-decoration:none;padding:4px 0}
+.topbar nav a:hover,.mark:hover{color:var(--signal);text-decoration:underline}
+.hero-inner{max-width:900px;margin:auto;padding:56px 24px 60px;text-align:center}
+.signature{display:flex;align-items:center;justify-content:center;gap:16px;margin:0 auto 18px;color:var(--wave);font:600 22px var(--serif)}
+.signature::before,.signature::after{content:"";width:50px;height:1px;background:var(--rule)}
+.hero h1{font:600 clamp(42px,7vw,78px)/1.08 var(--serif);letter-spacing:-.045em;margin:0 0 16px}
+.hero .lede{max-width:52ch;margin:0 auto 24px;color:var(--muted);font:400 clamp(17px,2.2vw,21px)/1.55 var(--serif)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.hero .btns{justify-content:center}
+.btn{display:inline-block;padding:10px 18px;border:1px solid #bca981;border-radius:3px;background:var(--paper);color:var(--ink);font:500 15px/1.4 var(--sans);text-decoration:none}
+.btn.primary,.btn:hover{background:#f2ead9;color:#503f28}
+@media(max-width:620px){.topbar-inner{justify-content:center}.topbar nav{justify-content:center;gap:2px 14px}.hero-inner{padding:36px 20px 40px}}
 
 /* ---------- Body layout ---------- */
 .layout{max-width:1080px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:260px minmax(0,1fr);gap:64px}
 aside{padding-top:56px}
 .side{position:sticky;top:32px}
-.portrait{width:132px;height:132px;border-radius:50%;background:var(--signal-soft);color:var(--signal);display:grid;place-items:center;font:600 44px var(--serif);overflow:hidden;margin-bottom:18px}
-.portrait img{width:100%;height:100%;object-fit:cover}
+
+
 .side .who{font-family:var(--serif);font-weight:600;font-size:20px;margin:0}
 .side .where{color:var(--muted);font-size:15px;line-height:1.5;margin:4px 0 20px}
 .side ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
@@ -111,7 +106,7 @@ p{margin:0 0 16px;max-width:68ch}
 .about p:first-of-type{font-family:var(--serif);font-size:21px;line-height:1.55}
 
 /* Now: current PhD work, the one card with weight */
-.now{background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--signal);border-radius:4px 12px 12px 4px;padding:26px 28px}
+.now{background:var(--paper);border:1px solid var(--rule);border-left:3px solid var(--wave);border-radius:2px;padding:26px 28px}
 .now h3{font-family:var(--serif);font-size:22px;font-weight:600;margin-bottom:10px}
 .now p{color:var(--muted)}
 .now .meta{font-size:14px;color:var(--muted);margin:0}
@@ -162,16 +157,15 @@ footer{border-top:1px solid var(--rule);padding:28px 24px 44px;font-size:14px;co
 @media (max-width:860px){
   .layout{grid-template-columns:1fr;gap:0}
   aside{padding-top:40px}
-  .side{position:static;display:grid;grid-template-columns:96px 1fr;gap:4px 20px;align-items:center}
-  .portrait{width:96px;height:96px;font-size:32px;margin:0;grid-row:span 2}
+  .side{position:static}
+
   .side .where{margin:0}
   .side ul{grid-column:1/-1;margin-top:20px}
   main{padding-top:48px}
-  .hero-inner{padding:104px 24px 48px}
 }
 
 @media print{
-  .hero canvas,.topbar,.btns,.hero-caption{display:none}
+  .topbar,.btns,.signature{display:none}
   .hero-inner{padding:0 0 16px}
   body{background:#fff;color:#000}
   .layout{grid-template-columns:1fr}
@@ -184,7 +178,6 @@ footer{border-top:1px solid var(--rule);padding:28px 24px 44px;font-size:14px;co
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="hero">
-  <canvas id="field" aria-hidden="true"></canvas>
 
   <div class="topbar">
     <div class="topbar-inner">
@@ -201,21 +194,20 @@ footer{border-top:1px solid var(--rule);padding:28px 24px 44px;font-size:14px;co
   </div>
 
   <div class="hero-inner">
+    <div class="signature" aria-hidden="true">PB</div>
     <h1>Prashant Badiger</h1>
-    <p class="lede"><span>PhD researcher at MIT Bengaluru. I teach WiFi to notice what moves through it, and I break systems so they can be built safer.</span></p>
+    <p class="lede">PhD researcher at MIT Bengaluru studying wireless sensing and the security of computing systems.</p>
     <div class="btns">
-      <a class="btn primary" href="#research">See my research</a>
+      <a class="btn primary" href="#research">Research</a>
+      <a class="btn" href="#publications">Publications</a>
       <!-- Restore once cv.pdf is uploaded: <a class="btn" href="cv.pdf">Download CV</a> -->
     </div>
   </div>
-  <p class="hero-caption"><span>Each line is a WiFi subcarrier. Move your pointer across them: anything in the room changes the channel.</span></p>
 </header>
 
 <div class="layout">
   <aside>
     <div class="side">
-      <!-- Add photo.jpg to the repo, then replace PB with: <img src="photo.jpg" alt="Prashant Badiger"> -->
-      <div class="portrait">PB</div>
       <p class="who">Prashant Badiger</p>
       <p class="where">PhD Research Scholar<br>School of Computer Engineering<br>MIT Bengaluru, MAHE</p>
       <ul>
@@ -358,87 +350,6 @@ footer{border-top:1px solid var(--rule);padding:28px 24px 44px;font-size:14px;co
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
 
-/* Signal field: WiFi subcarrier amplitudes, perturbed by presence */
-(function(){
-  var c = document.getElementById('field');
-  if (!c || !c.getContext) return;
-  var ctx = c.getContext('2d');
-  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var W, H, dpr, color, LINES = 28;
-  var seeds = [];
-  for (var i = 0; i < LINES; i++) seeds.push([Math.random()*6.28, Math.random()*6.28, 0.6 + Math.random()*0.8]);
-
-  // presence: a slow wanderer (like an animal crossing) plus the pointer
-  var walker = {x:0.78, vx:-0.00035};
-  var pointer = {x:-1, y:-1, strength:0};
-
-  function readColor(){ color = getComputedStyle(document.documentElement).getPropertyValue('--wave').trim() || '#2b7a8c'; }
-  function size(){
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
-    W = c.clientWidth; H = c.clientHeight;
-    c.width = W*dpr; c.height = H*dpr;
-    ctx.setTransform(dpr,0,0,dpr,0,0);
-  }
-  function bump(x, cx, w){ var d = (x-cx)/w; return Math.exp(-d*d); }
-
-  function draw(t){
-    ctx.clearRect(0,0,W,H);
-    var top = H*0.18, band = H*0.74, gap = band/LINES;
-    var wx = walker.x*W;
-    var step = W > 900 ? 6 : 8;
-    for (var i = 0; i < LINES; i++){
-      var s = seeds[i], base = top + i*gap;
-      var depth = i/LINES;
-      ctx.beginPath();
-      for (var x = 0; x <= W+step; x += step){
-        var u = x/W;
-        // multipath-like ripple
-        var y = Math.sin(u*9*s[2] + s[0] + t*0.0004)*gap*0.35
-              + Math.sin(u*23 + s[1] - t*0.0007)*gap*0.12;
-        // presence perturbation: stronger and phase-shifted per subcarrier
-        var p = bump(x, wx, 120)*0.9 + bump(x, pointer.x, 90)*pointer.strength*1.6;
-        y += p*Math.sin(i*0.9 + t*0.006)*gap*1.4;
-        if (x === 0) ctx.moveTo(x, base+y); else ctx.lineTo(x, base+y);
-      }
-      ctx.strokeStyle = color;
-      ctx.globalAlpha = 0.18 + 0.34*(1-Math.abs(depth-0.5)*2);
-      ctx.lineWidth = 1.1;
-      ctx.stroke();
-    }
-    ctx.globalAlpha = 1;
-  }
-
-  var last = 0;
-  function loop(t){
-    walker.x += walker.vx*(t-last > 0 && t-last < 100 ? (t-last)/16 : 1);
-    if (walker.x < -0.15) walker.x = 1.15;
-    pointer.strength *= 0.965;
-    last = t;
-    draw(t);
-    if (visible) raf = requestAnimationFrame(loop);
-  }
-
-  var raf, visible = true;
-  readColor(); size();
-  if (reduce){ draw(0); }
-  else {
-    raf = requestAnimationFrame(loop);
-    var hero = c.parentElement;
-    hero.addEventListener('pointermove', function(e){
-      var r = c.getBoundingClientRect();
-      pointer.x = e.clientX - r.left; pointer.y = e.clientY - r.top; pointer.strength = 1;
-    });
-    // pause when hero scrolls out of view
-    if ('IntersectionObserver' in window){
-      new IntersectionObserver(function(es){
-        var v = es[0].isIntersecting;
-        if (v && !visible){ visible = true; raf = requestAnimationFrame(loop); }
-        visible = v;
-      }).observe(c);
-    }
-  }
-  window.addEventListener('resize', function(){ size(); if (reduce) draw(0); });
-})();
 </script>
 </body>
 </html>

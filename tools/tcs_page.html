@@ -18,23 +18,24 @@
 <style>
 :root{
   color-scheme:light;
-  --bg:#eef2f1;
-  --paper:#f8faf9;
-  --ink:#14232b;
-  --muted:#56676f;
-  --rule:#d3dcdc;
-  --signal:#1c4f8c;
-  --signal-soft:#dbe6f2;
-  --wave:#2b7a8c;
-  --focus:#c2570c;
+  --bg:#faf8f2;
+  --paper:#fffdf8;
+  --ink:#332d34;
+  --muted:#625c58;
+  --rule:#dcd4c5;
+  --signal:#65425b;
+  --signal-soft:#f0e7ec;
+  --wave:#977538;
+  --focus:#845917;
   --serif:"Literata", Georgia, serif;
   --sans:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
+
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 var(--sans);overflow-wrap:anywhere}
 a{color:var(--signal);text-underline-offset:.2em}
 :focus-visible{outline:2px solid var(--focus);outline-offset:4px}
-.topbar{border-bottom:1px solid var(--rule);background:var(--paper)}
+.topbar{border-top:3px solid var(--wave);border-bottom:1px solid var(--rule);background:var(--paper)}
 .wrap{width:min(760px, calc(100% - 40px));margin-inline:auto}
 .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:13px}
 .mark{font:600 1.05rem var(--serif);color:var(--ink);text-decoration:none}
